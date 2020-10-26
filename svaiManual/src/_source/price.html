@@ -1,0 +1,43 @@
+{% macro price(d,s,list) %}
+	{% if d == 108 %}
+		{% if s == 4000 %}{{ list.d108.s4000 }}
+		{% elif s == 3500 %}{{ list.d108.s3500 }}
+		{% elif s == 3000 %}{{ list.d108.s3000 }}
+		{% elif s == 2500 %}{{ list.d108.s2500 }}
+		{% elif s == 2000 %}{{ list.d108.s2000 }}
+		{% elif s == 1500 %}{{ list.d108.s1500 }}
+		{% elif s == 1000 %}{{ list.d108.s1000 }}
+		{% else %}{{ list.d108.s500 }}
+		{% endif %}
+	{% elif d == 76 %}
+		{% if s == 4000 %}{{ list.d76.s4000 }}
+		{% elif s == 3500 %}{{ list.d76.s3500 }}
+		{% elif s == 3000 %}{{ list.d76.s3000 }}
+		{% elif s == 2500 %}{{ list.d76.s2500 }}
+		{% elif s == 2000 %}{{ list.d76.s2000 }}
+		{% elif s == 1500 %}{{ list.d76.s1500 }}
+		{% elif s == 1000 %}{{ list.d76.s1000 }}
+		{% else %}{{ list.d76.s500 }}
+		{% endif %}
+	{% elif d == 89 %}
+		{% if s == 4000 %}{{ list.d89.s4000 }}
+		{% elif s == 3500 %}{{ list.d89.s3500 }}
+		{% elif s == 3000 %}{{ list.d89.s3000 }}
+		{% elif s == 2500 %}{{ list.d89.s2500 }}
+		{% elif s == 2000 %}{{ list.d89.s2000 }}
+		{% elif s == 1500 %}{{ list.d89.s1500 }}
+		{% elif s == 1000 %}{{ list.d89.s1000 }}
+		{% else %}{{ list.d89.s500 }}
+		{% endif %}
+	{% else %}
+		{% if s == 4000 %}{{ list.d57.s4000 }}
+		{% elif s == 3500 %}{{ list.d57.s3500 }}
+		{% elif s == 3000 %}{{ list.d57.s3000 }}
+		{% elif s == 2500 %}{{ list.d57.s2500 }}
+		{% elif s == 2000 %}{{ list.d57.s2000 }}
+		{% elif s == 1500 %}{{ list.d57.s1500 }}
+		{% elif s == 1000 %}{{ list.d57.s1000 }}
+		{% else %}{{ list.d57.s500 }}
+		{% endif %}
+	{% endif %}
+{% endmacro %}
