@@ -2,8 +2,8 @@
 pageName: pirs-na-vintovyh-svayah
 ---
 {% import "./_source/city.html" as city %}
-{% set title = 'Фундамент для пирса на винтовых сваях в ' + city.label1(common.city) %}
-{% set description = 'Пирсы на винтовых сваях в ' + city.label1(common.city) + ' по цене изготовителя. Замеры и расчёты бесплатно. Более 1200 готовых фундаментов. Монтаж пирсов на сваях под ключ.' %}
+{% set title = 'Фундамент для пирса на винтовых сваях в ' + city.label1(contacts.city) %}
+{% set description = 'Пирсы на винтовых сваях в ' + city.label1(contacts.city) + ' по цене изготовителя. Замеры и расчёты бесплатно. Более 1200 готовых фундаментов. Монтаж пирсов на сваях под ключ.' %}
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" lang="ru">
 <head>
@@ -12,7 +12,7 @@ pageName: pirs-na-vintovyh-svayah
 	<meta property="og:title" content="{{title}}">
 	<meta name="description" content="{{description}}">
 	<meta property="og:description" content="{{description}}">
-	<meta name="keywords" content="пирс на винтовых сваях, сваи для пирса, {{common.city}}, цена, купить, установка, монтаж">
+	<meta name="keywords" content="пирс на винтовых сваях, сваи для пирса, {{contacts.city}}, цена, купить, установка, монтаж">
 	<meta property="og:url" content="{{common.domain}}/{{pageName}}/">
 	<link rel="canonical" href="{{common.domain}}/{{pageName}}/">
 	<link rel="alternate" type="application/rss+xml" href="{{common.domain}}/feed/{{pageName}}" title="{{title}}">
@@ -27,13 +27,13 @@ pageName: pirs-na-vintovyh-svayah
 			{% include "./_source/sidebar.html" %}
 			<section class="wrapper_column wrapper_column--main">
 				<ul class="breadcrumb">
-					<li><a href="../">Винтовые сваи {{common.city}}</a></li>
+					<li><a href="../">Винтовые сваи {{contacts.city}}</a></li>
 					<li><a href="../uslugi">Услуги монтажа винтовых свай</a></li>
 					<li class="active">Пирс на винтовых сваях</li>
 				</ul>
 				<div class="title v2 mg2-1">
-					<h1>Пирс на винтовых сваях В {{ city.label1(common.city) }}</h1>
-					<span class="text">{{description}} Наш телефон <a href="tel:8{{common.phoneNumber}}" class="callibri-phone" id="phone6">8 {{common.phoneNumber}}</a>. Звоните!</span>
+					<h1>Пирс на винтовых сваях В {{ city.label1(contacts.city) }}</h1>
+					<span class="text">{{description}} Наш телефон <a href="tel:8{{contacts.phoneNumber}}" class="callibri-phone" id="phone6">8 {{contacts.phoneNumber}}</a>. Звоните!</span>
 				</div>
 				<section class="piles-item-block">
 					<div class="title v4 mg2-1"><h2>ОСОБЕННОСТИ ФУНДАМЕНТА НА СВАЯХ ДЛЯ ПИРСА</h2></div>
@@ -139,7 +139,7 @@ pageName: pirs-na-vintovyh-svayah
 						<div class="piles-item-block_text">
 							<p>Компания «Свай-фундамент» идёт в ногу со временем и предлагает профессиональную и быструю установку свайных опор для пирсов. В нашем арсенале необходимая спецтехника, которая используется при монтаже на воде. Возведение происходит быстро, качественно, надёжно, несмотря на сложные технические условия.</p>
 							<p>Мы производим недорогие винтовые сваи с антикоррозионным покрытием. Гарантируем высокое качество наших изделий. </p>
-							<p>Остались вопросы? Просто позвоните нам по телефону <mark><a href="tel:8{{common.phoneNumber}}" class="callibri-phone" id="phone7">8 {{common.phoneNumber}}</a></mark> или оставьте заявку на нашем сайте. </p>
+							<p>Остались вопросы? Просто позвоните нам по телефону <mark><a href="tel:8{{contacts.phoneNumber}}" class="callibri-phone" id="phone7">8 {{contacts.phoneNumber}}</a></mark> или оставьте заявку на нашем сайте. </p>
 						</div>
 					</div>
 				</section>

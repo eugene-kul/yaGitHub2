@@ -2,8 +2,8 @@
 pageName: karkasnyi-dom-na-vintovyh-svayah
 ---
 {% import "./_source/city.html" as city %}
-{% set title = 'Фундамент для каркасного дома на винтовых сваях в ' + city.label1(common.city) %}
-{% set description = 'Винтовых свай под каркасные дома в ' + city.label1(common.city) + ' по цене изготовителя. Монтаж под ключ за 1 день. Оставляейте заявку на сайте. Замеры и расчёты бесплатно. Гарантия 3 года.' %}
+{% set title = 'Фундамент для каркасного дома на винтовых сваях в ' + city.label1(contacts.city) %}
+{% set description = 'Винтовых свай под каркасные дома в ' + city.label1(contacts.city) + ' по цене изготовителя. Монтаж под ключ за 1 день. Оставляейте заявку на сайте. Замеры и расчёты бесплатно. Гарантия 3 года.' %}
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" lang="ru">
 <head>
@@ -12,7 +12,7 @@ pageName: karkasnyi-dom-na-vintovyh-svayah
 	<meta property="og:title" content="{{title}}">
 	<meta name="description" content="{{description}}">
 	<meta property="og:description" content="{{description}}">
-	<meta name="keywords" content="дом на винтовых сваях, каркасный дом на винтовых сваях, фундамент для дома, {{common.city}}, цена, купить, установка, монтаж">
+	<meta name="keywords" content="дом на винтовых сваях, каркасный дом на винтовых сваях, фундамент для дома, {{contacts.city}}, цена, купить, установка, монтаж">
 	<meta property="og:url" content="{{common.domain}}/{{pageName}}/">
 	<link rel="canonical" href="{{common.domain}}/{{pageName}}/">
 	<link rel="alternate" type="application/rss+xml" href="{{common.domain}}/feed/{{pageName}}" title="{{title}}">
@@ -27,13 +27,13 @@ pageName: karkasnyi-dom-na-vintovyh-svayah
 			{% include "./_source/sidebar.html" %}
 			<section class="wrapper_column wrapper_column--main">
 				<ul class="breadcrumb">
-					<li><a href="../">Винтовые сваи {{common.city}}</a></li>
+					<li><a href="../">Винтовые сваи {{contacts.city}}</a></li>
 					<li><a href="../uslugi">Услуги монтажа винтовых свай</a></li>
 					<li class="active">Каркасный дом на винтовых сваях</li>
 				</ul>
 				<div class="title v2 mg2-1">
-					<h1>Каркасный дом НА ВИНТОВЫХ СВАЯХ В {{ city.label1(common.city) }}</h1>
-					<span class="text">{{description}} Наш телефон <a href="tel:8{{common.phoneNumber}}" class="callibri-phone" id="phone6">8 {{common.phoneNumber}}</a>. Звоните!</span>
+					<h1>Каркасный дом НА ВИНТОВЫХ СВАЯХ В {{ city.label1(contacts.city) }}</h1>
+					<span class="text">{{description}} Наш телефон <a href="tel:8{{contacts.phoneNumber}}" class="callibri-phone" id="phone6">8 {{contacts.phoneNumber}}</a>. Звоните!</span>
 				</div>
 				<section class="piles-item-block">
 					<div class="title v4 mg2-1"><h2>ОСОБЕННОСТИ ВИНТОВОГО СВАЙНОГО ФУНДАМЕНТА ДЛЯ СТРОИТЕЛЬСТВА КАРКАСНОГО ДОМА</h2></div>
@@ -129,15 +129,15 @@ pageName: karkasnyi-dom-na-vintovyh-svayah
 								</svg>
 						</div>
 						<div class="piles-item-block_text">
-							<p>В «Свай-фундамент {{common.city}}» можно заказать надёжные фундаменты на винтовых сваях.</p>
+							<p>В «Свай-фундамент {{contacts.city}}» можно заказать надёжные фундаменты на винтовых сваях.</p>
 							<p>Преимущества таких оснований:</p>
 							<ul class="v3"><li>Доступная цена. На 20% дешевле монолитных фундаментов;</li></ul>
 							<ul class="v3"><li>Установка на любом типе грунта;</li></ul>
 							<ul class="v3"><li>Установка в любое время года;</li></ul>
 							<ul class="v3"><li>Долговечность. Профессионально установленные свайные фундаменты прослужат Вам десятки лет;</li></ul>
 							<ul class="v3"><li>При необходимости возможна замена и ремонт.</li></ul>
-							<p>Компания «Свай-фундамент» установит фундамент на винтовых сваях под каркасный дом в {{ city.label1(common.city) }}. Мы являемся производителями винтовых свайных опор, поэтому у нас самые выгодные цены.</p>
-							<p>Нужна подробная консультация? Позвоните по телефону <mark><a href="tel:8{{common.phoneNumber}}" class="callibri-phone" id="phone7">8 {{common.phoneNumber}}</a></mark>. Наши сотрудники дадут исчерпывающие ответы на все Ваши вопросы.</p>
+							<p>Компания «Свай-фундамент» установит фундамент на винтовых сваях под каркасный дом в {{ city.label1(contacts.city) }}. Мы являемся производителями винтовых свайных опор, поэтому у нас самые выгодные цены.</p>
+							<p>Нужна подробная консультация? Позвоните по телефону <mark><a href="tel:8{{contacts.phoneNumber}}" class="callibri-phone" id="phone7">8 {{contacts.phoneNumber}}</a></mark>. Наши сотрудники дадут исчерпывающие ответы на все Ваши вопросы.</p>
 						</div>
 					</div>
 				</section>

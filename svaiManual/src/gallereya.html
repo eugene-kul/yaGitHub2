@@ -2,8 +2,8 @@
 pageName: gallereya
 ---
 {% import "./_source/city.html" as city %}
-{% set title = 'Фотогалерея выполненых работ в ' + city.label1(common.city) + ' - «Свай-фундамент».' %}
-{% set description = 'Фотогралерея работ «Свай-фундамент». Монтаж винтовых свай и фундамента на винтовых сваях в ' + city.label1(common.city) + '. Сваи от производителя, гарантия качества, низкие цены.' %}
+{% set title = 'Фотогалерея выполненых работ в ' + city.label1(contacts.city) + ' - «Свай-фундамент».' %}
+{% set description = 'Фотогралерея работ «Свай-фундамент». Монтаж винтовых свай и фундамента на винтовых сваях в ' + city.label1(contacts.city) + '. Сваи от производителя, гарантия качества, низкие цены.' %}
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" lang="ru">
 <head>
@@ -12,7 +12,7 @@ pageName: gallereya
 	<meta property="og:title" content="{{title}} Страница 1">
 	<meta name="description" content="{{description}} Страница 1">
 	<meta property="og:description" content="{{description}} Страница 1">
-	<meta name="keywords" content="фото винтовых свай, винтовые сваи, фотогалерея, фото, {{common.city}}, установка, монтаж">
+	<meta name="keywords" content="фото винтовых свай, винтовые сваи, фотогалерея, фото, {{contacts.city}}, установка, монтаж">
 	<meta property="og:url" content="{{common.domain}}/{{pageName}}/">
 	<link rel="canonical" href="{{common.domain}}/{{pageName}}/">
 	<link rel="alternate" type="application/rss+xml" href="{{common.domain}}/feed/{{pageName}}" title="{{title}}">
@@ -27,16 +27,16 @@ pageName: gallereya
 			{% include "./_source/sidebar.html" %}
 			<section class="wrapper_column wrapper_column--main">
 				<ul class="breadcrumb">
-					<li><a href="../">Винтовые сваи {{common.city}}</a></li>
+					<li><a href="../">Винтовые сваи {{contacts.city}}</a></li>
 					<li class="active">Галерея винтовых свай</li>
 				</ul>
 				<div class="title v2 mg2-1">
-					<h1>Фотографии винтовых свай в {{ city.label1(common.city) }}</h1>
-					<span class="text">{{description}} Наш телефон <a href="tel:8{{common.phoneNumber}}" class="callibri-phone" id="phone6">8 {{common.phoneNumber}}</a>. Звоните!</span>
+					<h1>Фотографии винтовых свай в {{ city.label1(contacts.city) }}</h1>
+					<span class="text">{{description}} Наш телефон <a href="tel:8{{contacts.phoneNumber}}" class="callibri-phone" id="phone6">8 {{contacts.phoneNumber}}</a>. Звоните!</span>
 				</div>
 				<section class="photo-block v2">
 					<div class="title v5">
-						<h2>Фото винтовых свай, устройства винтовых фундаментов в {{ city.label1(common.city) }}. Живые фотографии с объектов. Фото с монтажных работ</h2>
+						<h2>Фото винтовых свай, устройства винтовых фундаментов в {{ city.label1(contacts.city) }}. Живые фотографии с объектов. Фото с монтажных работ</h2>
 					</div>
 					<div class="photo-block_body gallery">
 						<a href="../images/gallery/original/01.jpeg" class="photo-block_item item-photo">

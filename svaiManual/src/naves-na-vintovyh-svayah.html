@@ -2,8 +2,8 @@
 pageName: naves-na-vintovyh-svayah
 ---
 {% import "./_source/city.html" as city %}
-{% set title = 'Фундамент под навес на винтовых сваях в ' + city.label1(common.city) %}
-{% set description = 'Заказать винтовой фундамент под навес в ' + city.label1(common.city) + ' от компании-производителя. Более 1200 выполненных фундаментов. Скидки. Гарантия.' %}
+{% set title = 'Фундамент под навес на винтовых сваях в ' + city.label1(contacts.city) %}
+{% set description = 'Заказать винтовой фундамент под навес в ' + city.label1(contacts.city) + ' от компании-производителя. Более 1200 выполненных фундаментов. Скидки. Гарантия.' %}
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" lang="ru">
 <head>
@@ -12,7 +12,7 @@ pageName: naves-na-vintovyh-svayah
 	<meta property="og:title" content="{{title}}">
 	<meta name="description" content="{{description}}">
 	<meta property="og:description" content="{{description}}">
-	<meta name="keywords" content="навес на винтовых сваях, фундамент для навеса, {{common.city}}, цена, купить, установка, монтаж">
+	<meta name="keywords" content="навес на винтовых сваях, фундамент для навеса, {{contacts.city}}, цена, купить, установка, монтаж">
 	<meta property="og:url" content="{{common.domain}}/{{pageName}}/">
 	<link rel="canonical" href="{{common.domain}}/{{pageName}}/">
 	<link rel="alternate" type="application/rss+xml" href="{{common.domain}}/feed/{{pageName}}" title="{{title}}">
@@ -27,13 +27,13 @@ pageName: naves-na-vintovyh-svayah
 			{% include "./_source/sidebar.html" %}
 			<section class="wrapper_column wrapper_column--main">
 				<ul class="breadcrumb">
-					<li><a href="../">Винтовые сваи {{common.city}}</a></li>
+					<li><a href="../">Винтовые сваи {{contacts.city}}</a></li>
 					<li><a href="../uslugi">Услуги монтажа винтовых свай</a></li>
 					<li class="active">Навес на винтовых сваях</li>
 				</ul>
 				<div class="title v2 mg2-1">
-					<h1>Навес на винтовых сваях В {{ city.label1(common.city) }}</h1>
-					<span class="text">{{description}} Наш телефон <a href="tel:8{{common.phoneNumber}}" class="callibri-phone" id="phone6">8 {{common.phoneNumber}}</a>. Звоните!</span>
+					<h1>Навес на винтовых сваях В {{ city.label1(contacts.city) }}</h1>
+					<span class="text">{{description}} Наш телефон <a href="tel:8{{contacts.phoneNumber}}" class="callibri-phone" id="phone6">8 {{contacts.phoneNumber}}</a>. Звоните!</span>
 				</div>
 				<section class="piles-item-block">
 					<div class="title v4 mg2-1"><h2>ОСОБЕННОСТИ ФУНДАМЕНТА НА СВАЯХ ДЛЯ ДОМА</h2></div>
@@ -47,7 +47,7 @@ pageName: naves-na-vintovyh-svayah
 							<p>Может быть как самостоятельным сооружением, так и пристройкой к дому. Он защищает участок от дождя, снега и палящих солнечных лучей.</p> 
 							<p>Возводят такие сооружения в основном на металлических опорах, которые бетонируют.</p> 
 							<p>Отличным вариантом для вашего участка станет навес на винтовых сваях. Он достойно выдержит  перепады температур,  ураганный ветер, возможные подтопления.</p>
-							<p>Приобрести винтовые сваи под навес в {{ city.label1(common.city) }} можно в компании «Свай-фундамент», являющейся производителем недорогих, но при этом качественных опор.</p>
+							<p>Приобрести винтовые сваи под навес в {{ city.label1(contacts.city) }} можно в компании «Свай-фундамент», являющейся производителем недорогих, но при этом качественных опор.</p>
 						</div>
 					</div>
 				</section>
@@ -142,13 +142,13 @@ pageName: naves-na-vintovyh-svayah
 						<div class="piles-item-block_text">
 							<p>От того, насколько качественным будет фундамент, зависит и прочность всего строения.</p>
 							<p>Компания «Свай-фундамент» предлагает своим клиентам только высококачественную продукцию, а также монтаж «под ключ» с соблюдением всех норм, регламентов и т.д.</p>
-							<p>Наши цены Вас приятно удивят! И это не пустые слова. Мы являемся производителями свай в {{ city.label1(common.city) }}. Поэтому никаких накруток! Сваи по цене изготовителя. </p>
+							<p>Наши цены Вас приятно удивят! И это не пустые слова. Мы являемся производителями свай в {{ city.label1(contacts.city) }}. Поэтому никаких накруток! Сваи по цене изготовителя. </p>
 							<p>Более 1200 выполненных работ, обязательное заключение договора, строгое соблюдение сроков. На всю продукцию и монтаж предусмотрена гарантия 3 года.</p>
 							<p>У Вас остались вопросы? Нужна профессиональная консультация? Свяжитесь с нами удобным для Вас способом: </p>
 							<ul>
-								<li>Позвоните <mark><a href="tel:8{{common.phoneNumber}}" class="callibri-phone" id="phone7">+7 {{common.phoneNumber}}</a></mark>;</li>
+								<li>Позвоните <mark><a href="tel:8{{contacts.phoneNumber}}" class="callibri-phone" id="phone7">+7 {{contacts.phoneNumber}}</a></mark>;</li>
 								<li>Оставьте заявку на сайте;</li>
-								<li>Приезжайте в офис по адресу: <mark>город {{common.city}}, ул. {{common.address}}</mark>.</li>
+								<li>Приезжайте в офис по адресу: <mark>город {{contacts.city}}, ул. {{contacts.address}}</mark>.</li>
 							</ul>
 						</div>
 					</div>

@@ -1,15 +1,5 @@
 {
-	"city": "Кемерово",
-	"addressRegion": {"r1":"Кемеровская","r2":"Кемеровской"},
-	"postalCode": "630129",
-	"address": "Кемеровская, 77",
-	"cityCode": "383",
-	"shortPhoneNumber": "227-96-42",
-	"phoneNumber": "(800) 555-35-35",
-	"email": "info@info-kemerovo.ru",
 	"internalEmail": "test@ya-mobile.ru",
-	"workingTime": "Ежедневно: 9:00 - 20:00",
-	"workingTimeEn": "Mo-Su 09:00-20:00",
 	"directorsFullName": "Иванов Иван Иванович",
 	"oooOrIp": "111",
 	"innOrKpp": "222",
@@ -26,8 +16,6 @@
 	"callibri": "yes",
 	"envybox": "00000000000000000000000000000000",
 	"domain": "https://svai-vintovye-kem.ru",
-	"phoneViber": "9991112233",
-	"phoneWhatsUp": "9991112233",
 	"geo": {
 		"latitude": "53.2605796",
 		"longitude": "49.9179003"

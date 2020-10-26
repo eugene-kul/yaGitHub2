@@ -1,0 +1,12 @@
+{% macro item(img,name,date,text) %}
+<div class="reviews-block_item">
+		<div class="reviews-block_row">
+			<img class="reviews-block_avatar" src="../images/avatar/{{img}}" width="80" height="80" alt="Фотография пользователя">
+			<div class="reviews-block_description">
+				<div class="reviews-block_name">{{name}}</div>
+				<div class="reviews-block_date">{{date}}</div>
+			</div>
+		</div>
+		<div class="reviews-block_item-text">{{text}}</div>
+	</div>
+{% endmacro %}

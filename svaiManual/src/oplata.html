@@ -2,8 +2,8 @@
 pageName: oplata
 ---
 {% import "./_source/city.html" as city %}
-{% set title = 'Оплата винтовых свай в ' + city.label1(common.city) + ' - «Свай-фундамент»' %}
-{% set description = 'Условия оплаты услуг монтажа винтовых свай и покупки готовых свай, продукции на сайте Сваи ' + common.city + '. Наличный, безналичная оплата, банковская карта. Кредит и рассрочка.' %}
+{% set title = 'Оплата винтовых свай в ' + city.label1(contacts.city) + ' - «Свай-фундамент»' %}
+{% set description = 'Условия оплаты услуг монтажа винтовых свай и покупки готовых свай, продукции на сайте Сваи ' + contacts.city + '. Наличный, безналичная оплата, банковская карта. Кредит и рассрочка.' %}
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" lang="ru">
 <head>
@@ -12,7 +12,7 @@ pageName: oplata
 	<meta property="og:title" content="{{title}}">
 	<meta name="description" content="{{description}}">
 	<meta property="og:description" content="{{description}}">
-	<meta name="keywords" content="оплата винтовых свай, сваи цена, кредит, рассрочка, {{common.city}}, цена, купить">
+	<meta name="keywords" content="оплата винтовых свай, сваи цена, кредит, рассрочка, {{contacts.city}}, цена, купить">
 	<meta property="og:url" content="{{common.domain}}/{{pageName}}/">
 	<link rel="canonical" href="{{common.domain}}/{{pageName}}/">
 	<link rel="alternate" type="application/rss+xml" href="{{common.domain}}/feed/{{pageName}}" title="{{title}}">
@@ -27,12 +27,12 @@ pageName: oplata
 			{% include "./_source/sidebar.html" %}
 		<section class="wrapper_column wrapper_column--main">
 			<ul class="breadcrumb">
-				<li><a href="../">Винтовые сваи {{common.city}}</a></li>
+				<li><a href="../">Винтовые сваи {{contacts.city}}</a></li>
 				<li class="active">Оплата винтовых свай</li>
 			</ul>
 			<div class="title v2 mg2-1">
-				<h1>Оплата винтовых свай в {{ city.label1(common.city) }}</h1>
-				<span class="text">{{description}} Наш телефон <a href="tel:8{{common.phoneNumber}}" class="callibri-phone" id="phone6">8 {{common.phoneNumber}}</a>. Звоните!</span>
+				<h1>Оплата винтовых свай в {{ city.label1(contacts.city) }}</h1>
+				<span class="text">{{description}} Наш телефон <a href="tel:8{{contacts.phoneNumber}}" class="callibri-phone" id="phone6">8 {{contacts.phoneNumber}}</a>. Звоните!</span>
 			</div>
 			<section class="payment-page">
 				<div class="payment-page_body">

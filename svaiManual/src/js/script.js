@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	//подсвечивание активных пунктов в шапке меню
 	let dataPage = document.querySelector('.wrapper').getAttribute('data-page');
-	if (dataPage != '404' && dataPage != '') {
+	if (dataPage != '404' && dataPage != null) {
 		let pageLink = document.querySelector('.bottom-row_menu-links[data-page="' + dataPage + '"]');
 		pageLink.classList.add('active');
 		if (dataPage == 1) {
@@ -55,13 +55,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	//подсвечивание активных пунктов в сайдбаре
 	let dataSidePage = document.querySelector('.wrapper').getAttribute('data-sidePAge');
-	if (dataPage === '' && dataSidePage != '') {
+	if (dataPage === null && dataSidePage != null) {
 		let link = document.querySelector('.sidebar_item-link[data-SidePage="' + dataSidePage + '"]');
 		link.classList.add('active');
 		link.parentElement.parentElement.style.height = link.parentElement.parentElement.scrollHeight + 'px';
 		link.parentElement.parentElement.previousElementSibling.classList.add('active');
 		link.addEventListener('click', function(event) {event.preventDefault();});
-	} else if (dataPage != '' && dataSidePage === '') {
+	} else if (dataPage != null && dataSidePage === null) {
 		let link = document.querySelector('.sidebar_item-link[data-SidePage="1"]');
 		link.parentElement.parentElement.style.height = link.parentElement.parentElement.scrollHeight + 'px';
 		link.parentElement.parentElement.previousElementSibling.classList.add('active');
