@@ -5,8 +5,8 @@ useBlockImage: table02.jpg
 ---
 {% import "./_source/city.html" as city %}
 {% set pageName = 'vintovie-svai-'+d+'-mm' %}
-{% set title = 'Винтовые сваи диаметром '+ d + ' мм для фундамента от производителя в ' + city.label1(common.city) %}
-{% set description = 'Заказать винтовые сваи диаметром '+ d +' мм в ' + city.label1(common.city) + '. Антикоррозийное покрытие. Монтаж «под ключ» в кратчайшие сроки. Гарантия качества. Оставьте заявку на сайте!' %}
+{% set title = 'Винтовые сваи диаметром '+ d + ' мм для фундамента от производителя в ' + city.label1(contacts.city) %}
+{% set description = 'Заказать винтовые сваи диаметром '+ d +' мм в ' + city.label1(contacts.city) + '. Антикоррозийное покрытие. Монтаж «под ключ» в кратчайшие сроки. Гарантия качества. Оставьте заявку на сайте!' %}
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" lang="ru">
 <head>
@@ -15,7 +15,7 @@ useBlockImage: table02.jpg
 	<meta property="og:title" content="{{title}}">
 	<meta name="description" content="{{description}}">
 	<meta property="og:description" content="{{description}}">
-	<meta name="keywords" content="винтовые сваи {{d}} мм, винтовые сваи, {{common.city}}, цена, купить, установка, монтаж">
+	<meta name="keywords" content="винтовые сваи {{d}} мм, винтовые сваи, {{contacts.city}}, цена, купить, установка, монтаж">
 	<meta property="og:url" content="{{common.domain}}{{pageName}}/">
 	<link rel="canonical" href="{{common.domain}}{{pageName}}/">
 	<link rel="alternate" type="application/rss+xml" href="{{common.domain}}feed/{{pageName}}" title="{{title}}">
@@ -31,13 +31,13 @@ useBlockImage: table02.jpg
 			{% import "./_source/price.html" as item %}
 			<section class="wrapper_column wrapper_column--main">
 				<ul class="breadcrumb">
-					<li><a href="../">Винтовые сваи {{common.city}}</a></li>
+					<li><a href="../">Винтовые сваи {{contacts.city}}</a></li>
 					<li><a href="../ceni">Купить винтовые сваи</a></li>
 					<li class="active">Винтовые сваи диаметром {{d}} мм</li>
 				</ul>
 				<div class="title v2 mg2-1">
-					<h1>ВИНТОВЫЕ СВАИ С ПОЛИМЕРНЫМ ПОКРЫТИЕМ ДИАМЕТРОМ {{d}} ММ В {{ city.label1(common.city) }}</h1>
-					<span class="text">{{description}} Наш телефон <a href="tel:8{{common.phoneNumber}}" class="callibri-phone" id="phone6">8 {{common.phoneNumber}}</a>. Звоните!</span>
+					<h1>ВИНТОВЫЕ СВАИ С ПОЛИМЕРНЫМ ПОКРЫТИЕМ ДИАМЕТРОМ {{d}} ММ В {{ city.label1(contacts.city) }}</h1>
+					<span class="text">{{description}} Наш телефон <a href="tel:8{{contacts.phoneNumber}}" class="callibri-phone" id="phone6">8 {{contacts.phoneNumber}}</a>. Звоните!</span>
 				</div>
 				<section class="piles-item-block">
 					<div class="piles-item-block_text-block v2">
@@ -47,7 +47,7 @@ useBlockImage: table02.jpg
 				</section>
 				<section class="table-block table57">
 					<div class="table-block_title title v4 mg2">
-						<h2>Цены на винтовые сваи в {{ city.label1(common.city) }} диаметром {{d}} мм с полимерным покрытием</h2>
+						<h2>Цены на винтовые сваи в {{ city.label1(contacts.city) }} диаметром {{d}} мм с полимерным покрытием</h2>
 						<span class="text">Толщина ствола 3,5 мм, толщина лопасти 4 мм, диаметр лопасти сваи, 180 мм</span>
 					</div>
 					<div class="table-block_body">
@@ -176,7 +176,7 @@ useBlockImage: table02.jpg
 						<form action="#!" method="POST" onsubmit="yaCounter66443812.reachGoal('formSvai1');" id="formSvai1" name="Узнать цену на монтаж и доставку" class="get-price_form">
 							<div class="get-price_form-title">
 								<h2>Узнать цену на монтаж и доставку</h2>
-								<span class="text">винтовых свай с полимерным покрытием в {{ city.label1(common.city) }}</span>
+								<span class="text">винтовых свай с полимерным покрытием в {{ city.label1(contacts.city) }}</span>
 							</div>
 							<span class="get-price_input-body input-number v2 active fb30">
 								<span class="placeholder active">Количество свай</span>
@@ -245,11 +245,11 @@ useBlockImage: table02.jpg
 							<div class="technology-block_links">
 								<div class="technology-block_item">
 									<span class="icon-type1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"><path fill="#fff" d="M3.52 7.45c1.2 2.477 3.13 4.503 5.492 5.763l1.834-1.93c.229-.24.558-.31.846-.214a9.076 9.076 0 0 0 2.975.499c.462 0 .833.389.833.875v3.062c0 .486-.37.875-.833.875C6.842 16.38.5 9.721.5 1.505c0-.486.375-.875.833-.875H4.25c.462 0 .833.39.833.875 0 1.09.167 2.144.475 3.124a.91.91 0 0 1-.204.888L3.521 7.45z"/></svg></span>
-									<a href="tel:8{{common.phoneNumber}}" class="callibri-phone" id="phone10">8 {{common.phoneNumber}}</a>
+									<a href="tel:8{{contacts.phoneNumber}}" class="callibri-phone" id="phone10">8 {{contacts.phoneNumber}}</a>
 								</div>
 								<div class="technology-block_item">
 									<span class="icon-type1"><svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 0.5H1.5C0.809375 0.5 0.25625 1.05937 0.25625 1.75L0.25 9.25C0.25 9.94062 0.809375 10.5 1.5 10.5H11.5C12.1906 10.5 12.75 9.94062 12.75 9.25V1.75C12.75 1.05937 12.1906 0.5 11.5 0.5ZM11.5 3L6.5 6.125L1.5 3V1.75L6.5 4.875L11.5 1.75V3Z" fill="white" fill-opacity="0.9"/></svg></span>
-									<a href="mailto:{{common.email}}"><span class="mail">{{common.email}}</span></a>
+									<a href="mailto:{{contacts.email}}"><span class="mail">{{contacts.email}}</span></a>
 								</div>
 							</div>
 						</div>

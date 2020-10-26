@@ -2,9 +2,9 @@
 divSideBarMain: main-page-sidebar
 ---
 {% import "./_source/city.html" as city %}
-{% set title = 'Фундамент на винтовых сваях в ' + city.label1(common.city) + ' недорого' %}
-{% set description = 'Производитель винтовых свай в ' + city.label1(common.city) + '. Цена на винтовые сваи. Монтаж винтовых сваи. Гарантия. Звоните или оставляйте заявку на сайте!' %}
-{% set keywords = 'свайный фундамент, винтовые сваи, винтовой фундамент, монтаж винтовых свай, калькулятор свайного фундамента, сваи под фундамент, сваи винтовые для фундамента, '+common.city+', цена, купить, установка, монтаж' %}
+{% set title = 'Фундамент на винтовых сваях в ' + city.label1(contacts.city) + ' недорого' %}
+{% set description = 'Производитель винтовых свай в ' + city.label1(contacts.city) + '. Цена на винтовые сваи. Монтаж винтовых сваи. Гарантия. Звоните или оставляйте заявку на сайте!' %}
+{% set keywords = 'свайный фундамент, винтовые сваи, винтовой фундамент, монтаж винтовых свай, калькулятор свайного фундамента, сваи под фундамент, сваи винтовые для фундамента, '+contacts.city+', цена, купить, установка, монтаж' %}
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" lang="ru">
 	<head>
@@ -26,8 +26,8 @@ divSideBarMain: main-page-sidebar
 			{
 				"@context": "http://schema.org/",
 				"@type": "WebSite",
-				"name": "Винтовые сваи {{common.city}}",
-				"alternateName": "Винтовые сваи {{common.city}}. {{common.city}}",
+				"name": "Винтовые сваи {{contacts.city}}",
+				"alternateName": "Винтовые сваи {{contacts.city}}. {{contacts.city}}",
 				"url": "{{common.domain}}"
 			}
 		</script>
@@ -35,31 +35,31 @@ divSideBarMain: main-page-sidebar
 			{
 				"@context": "http://www.schema.org",
 				"@type": "LocalBusiness",
-				"name": "Винтовые сваи {{common.city}}",
+				"name": "Винтовые сваи {{contacts.city}}",
 				"url": "{{common.domain}}",
 				"sameAs": "{{common.vkPage}}",
 				"logo": "{{common.domain}}img/logo/logo.png",
 				"image": "{{common.domain}}img/content/jpg/@2x/t01.jpg",
-				"description": "Винтовые сваи в {{city.label1(common.city)}} с установкой под ключ - продажа материалов от производителя. Монтаж фундаментов под ключ",
+				"description": "Винтовые сваи в {{city.label1(contacts.city)}} с установкой под ключ - продажа материалов от производителя. Монтаж фундаментов под ключ",
 				"address": {
 					"@type": "PostalAddress",
-					"streetAddress": "ул. {{common.address}}",
-					"addressLocality": "{{common.city}}",
-					"addressRegion": "{{common.addressRegion.r1}} область",
-					"postalCode": "{{common.postalCode}}",
+					"streetAddress": "ул. {{contacts.address}}",
+					"addressLocality": "{{contacts.city}}",
+					"addressRegion": "{{contacts.addressRegion.r1}} область",
+					"postalCode": "{{contacts.postalCode}}",
 					"addressCountry": "Россия"
 				},
 				"geo": {
 					"@type": "GeoCoordinates",
-					"latitude": "{{common.geo.latitude}}",
-					"longitude": "{{common.geo.longitude}}"
+					"latitude": "{{contacts.geo.latitude}}",
+					"longitude": "{{contacts.geo.longitude}}"
 				},
-				"openingHours": "{{common.workingTimeEn}}",
-				"telephone": "8{{common.phoneNumber}}",
+				"openingHours": "{{contacts.workingTimeEn}}",
+				"telephone": "8{{contacts.phoneNumber}}",
 				"priceRange": "$$",
 				"contactPoint": {
 					"@type": "ContactPoint",
-					"telephone": "8{{common.phoneNumber}}",
+					"telephone": "8{{contacts.phoneNumber}}",
 					"contactType": "sales"
 				}
 			}
@@ -68,34 +68,34 @@ divSideBarMain: main-page-sidebar
 			{
 				"@context": "http://schema.org",
 				"@type": "ImageObject",
-				"contentLocation": "Винтовые сваи {{common.city}} от производителя. Россия",
+				"contentLocation": "Винтовые сваи {{contacts.city}} от производителя. Россия",
 				"contentUrl": "{{common.domain}}img/logo/logo.png",
-				"description": "Винтовые сваи {{common.city}} от производителя.",
-				"name": "Винтовые сваи в {{city.label1(common.city)}}"
+				"description": "Винтовые сваи {{contacts.city}} от производителя.",
+				"name": "Винтовые сваи в {{city.label1(contacts.city)}}"
 			}
 		</script>
 		<script type='application/ld+json'>
 			{
 				"@context": "http://schema.org/",
 				"@type": "Service",
-				"serviceType": "Установка фундаментов на винтовых сваях под ключ в {{city.label1(common.city)}}",
+				"serviceType": "Установка фундаментов на винтовых сваях под ключ в {{city.label1(contacts.city)}}",
 				"provider": {
 					"@type": "LocalBusiness",
 					"image": "{{common.domain}}img/logo/logo.png",
 					"priceRange": "$$",
 					"address": {
 						"@type": "PostalAddress",
-						"addressLocality": "{{common.city}}",
-						"addressRegion": "{{common.addressRegion.r1}} область",
-						"streetAddress": "ул. {{common.address}}"
+						"addressLocality": "{{contacts.city}}",
+						"addressRegion": "{{contacts.addressRegion.r1}} область",
+						"streetAddress": "ул. {{contacts.address}}"
 					},
-					"description": "Производитель винтовых свай в {{city.label1(common.city)}}. Монтаж винтовых сваи и фундаментов на винтовых сваях. Гарантия качества. Большой опыт работы. Звоните или оставляйте заявку на сайте!",
-					"name": "Винтовые сваи {{common.city}}",
+					"description": "Производитель винтовых свай в {{city.label1(contacts.city)}}. Монтаж винтовых сваи и фундаментов на винтовых сваях. Гарантия качества. Большой опыт работы. Звоните или оставляйте заявку на сайте!",
+					"name": "Винтовые сваи {{contacts.city}}",
 					"telephone": "+73832279642"
 				},
 				"areaServed": {
 					"@type": "State",
-					"name": "{{common.city}}"
+					"name": "{{contacts.city}}"
 				}
 			}
 		</script>
@@ -110,7 +110,7 @@ divSideBarMain: main-page-sidebar
 						<span class="main-block_title--icon"></span>
 						<h1>Фундамент на винтовых сваях</h1>
 						<h2>С ПОРОШКОВЫМ ПОКРЫТИЕМ</h2>
-						<h2>"под ключ" в {{ city.label1(common.city) }}</h2>
+						<h2>"под ключ" в {{ city.label1(contacts.city) }}</h2>
 					</div>
 					<div class="main-block_form">
 						<form action="#!" method="POST" onsubmit="yaCounter66443812.reachGoal('mainForm');" id="mainForm"
@@ -145,7 +145,7 @@ divSideBarMain: main-page-sidebar
 			</section>
 			<section class="base-block container">
 				<div class="base-block_title title mg2">
-					<h2>Фундамент на винтовых сваях в {{ city.label1(common.city) }}</h2>
+					<h2>Фундамент на винтовых сваях в {{ city.label1(contacts.city) }}</h2>
 				</div>
 				<div class="base-block_list">
 					<div class="base-block_item product-item">
@@ -284,7 +284,7 @@ divSideBarMain: main-page-sidebar
 			</section>
 			<section class="piles-block container">
 				<div class="piles-block_title title mg1">
-					<h2>Цены на винтовые сваи в {{ city.label1(common.city) }}</h2>
+					<h2>Цены на винтовые сваи в {{ city.label1(contacts.city) }}</h2>
 				</div>
 				<div class="piles-block_body">
 					<a href="vintovie-svai-57-mm" title="винтовые сваи диаметром 57мм" class="piles-block_item piles-item">
@@ -343,7 +343,7 @@ divSideBarMain: main-page-sidebar
 			</section>
 			<section class="project-block container">
 				<div class="project-block_title title mg1">
-					<h2>Реализованные проекты в {{ city.label1(common.city) }}</h2>
+					<h2>Реализованные проекты в {{ city.label1(contacts.city) }}</h2>
 				</div>
 				<div class="project-block_body">
 					<a href="gallereya" title="Галлерея" class="project-block_item item-project">
@@ -415,7 +415,7 @@ divSideBarMain: main-page-sidebar
 			</section>
 			<section class="base-block container">
 				<div class="title mg1">
-					<h2>Услуги монтажа винтовых свай в {{ city.label1(common.city) }}</h2>
+					<h2>Услуги монтажа винтовых свай в {{ city.label1(contacts.city) }}</h2>
 				</div>
 				<div class="base-block_list">
 					<div class="base-block_item product-item">
@@ -874,7 +874,7 @@ divSideBarMain: main-page-sidebar
 			</section>
 			<section class="photo-block container">
 				<div class="photo-block_title title mg1">
-					<h2>Фотографии винтовых свай в {{ city.label1(common.city) }}</h2>
+					<h2>Фотографии винтовых свай в {{ city.label1(contacts.city) }}</h2>
 				</div>
 				<div class="photo-block_body gallery">
 					<a href="images/gallery/original/01.jpg" title="фотография 1" class="photo-block_item item-photo">
@@ -966,11 +966,11 @@ divSideBarMain: main-page-sidebar
 						<div class="technology-block_links">
 							<div class="technology-block_item">
 								<span class="icon-type1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"><path fill="#fff" d="M3.52 7.45c1.2 2.477 3.13 4.503 5.492 5.763l1.834-1.93c.229-.24.558-.31.846-.214a9.076 9.076 0 0 0 2.975.499c.462 0 .833.389.833.875v3.062c0 .486-.37.875-.833.875C6.842 16.38.5 9.721.5 1.505c0-.486.375-.875.833-.875H4.25c.462 0 .833.39.833.875 0 1.09.167 2.144.475 3.124a.91.91 0 0 1-.204.888L3.521 7.45z" /></svg></span>
-								<a href="tel:8{{common.phoneNumber}}" title="номер телефона" class="callibri-phone" id="phone5">8 {{common.phoneNumber}}</a>
+								<a href="tel:8{{contacts.phoneNumber}}" title="номер телефона" class="callibri-phone" id="phone5">8 {{contacts.phoneNumber}}</a>
 							</div>
 							<div class="technology-block_item">
 								<span class="icon-type1"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"xmlns="http://www.w3.org/2000/svg"><path d="M11.5 0.5H1.5C0.809375 0.5 0.25625 1.05937 0.25625 1.75L0.25 9.25C0.25 9.94062 0.809375 10.5 1.5 10.5H11.5C12.1906 10.5 12.75 9.94062 12.75 9.25V1.75C12.75 1.05937 12.1906 0.5 11.5 0.5ZM11.5 3L6.5 6.125L1.5 3V1.75L6.5 4.875L11.5 1.75V3Z" fill="white" fill-opacity="0.9" /></svg></span>
-								<a href="mailto:{{common.email}}" title="написать на электронную почту"><span class="mail">{{common.email}}</span></a>
+								<a href="mailto:{{contacts.email}}" title="написать на электронную почту"><span class="mail">{{contacts.email}}</span></a>
 							</div>
 						</div>
 					</div>
@@ -1031,7 +1031,7 @@ divSideBarMain: main-page-sidebar
 			</section>
 			<section class="advantages-block container">
 				<div class="advantages-block_title title mg1">
-					<h2>Преимущества компании Сваи {{common.city}}</h2>
+					<h2>Преимущества компании Сваи {{contacts.city}}</h2>
 				</div>
 				<div class="advantages-block_body">
 					<div class="advantages-block_item">

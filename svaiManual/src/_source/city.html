@@ -1,6 +1,42 @@
 
-{% macro label1(city) %}{% if city[(city | length) - 1] != 'о' %}{% if city[(city | length) - 1] == 'ь' %}{{ city | reverse | replace(city[(city | length) - 1], "и", 1) | reverse }}{% elif city[(city | length) - 1] == 'а' %}{{ city | reverse | replace(city[(city | length) - 1], "е", 1) | reverse }}{% else %}{{ city+"е" }}{% endif %}{% else %}{{ city }}{% endif %}{% endmacro %}
+{% macro label1(city) %}
+	{%- if city[(city | length) - 1] != 'о' -%}
+		{%- if city[(city | length) - 1] == 'ь' -%}
+			{{ city | reverse | replace(city[(city | length) - 1], "и", 1) | reverse }}
+		{%- elif city[(city | length) - 1] == 'а' -%}
+			{{ city | reverse | replace(city[(city | length) - 1], "е", 1) | reverse }}
+		{%- else -%}
+			{{ city+"е" }}
+		{%- endif -%}
+	{%- else -%}
+		{{ city }}
+	{%- endif -%}
+{% endmacro %}
 
-{% macro label2(city) %}{% if city[(city | length) - 1] != 'о' %}{% if city[(city | length) - 1] == 'ь' %}{{ city | reverse | replace(city[(city | length) - 1], "и", 1) | reverse }}{% elif city[(city | length) - 1] == 'а' %}{{ city | reverse | replace(city[(city | length) - 1], "е", 1) | reverse }}{% else %}{{ city+"у" }}{% endif %}{% else %}{{ city }}{% endif %}{% endmacro %}
+{% macro label2(city) %}
+	{%- if city[(city | length) - 1] != 'о' -%}
+		{%- if city[(city | length) - 1] == 'ь' -%}
+			{{ city | reverse | replace(city[(city | length) - 1], "и", 1) | reverse }}
+		{%- elif city[(city | length) - 1] == 'а' -%}
+			{{ city | reverse | replace(city[(city | length) - 1], "е", 1) | reverse }}
+		{%- else -%}
+			{{ city+"у" }}
+		{%- endif -%}
+	{%- else -%}
+		{{ city }}
+	{%- endif -%}
+{% endmacro %}
 
-{% macro label3(city) %}{% if city[(city | length) - 1] != 'о' %}{% if city[(city | length) - 1] == 'ь' %}{{ city | reverse | replace(city[(city | length) - 1], "и", 1) | reverse }}{% elif city[(city | length) - 1] == 'а' %}{{ city | reverse | replace(city[(city | length) - 1], "ы", 1) | reverse }}{% else %}{{ city + "а" }}{% endif %}{% else %}{{ city }}{% endif %}{% endmacro %}
+{% macro label3(city) %}
+	{%- if city[(city | length) - 1] != 'о' -%}
+		{%- if city[(city | length) - 1] == 'ь' -%}
+			{{ city | reverse | replace(city[(city | length) - 1], "и", 1) | reverse }}
+		{%- elif city[(city | length) - 1] == 'а' -%}
+			{{ city | reverse | replace(city[(city | length) - 1], "ы", 1) | reverse }}
+		{%- else -%}
+			{{ city + "а" }}
+		{%- endif -%}
+	{%- else -%}
+		{{ city }}
+	{%- endif -%}
+{% endmacro %}
