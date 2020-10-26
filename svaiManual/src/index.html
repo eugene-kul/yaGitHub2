@@ -14,10 +14,10 @@ divSideBarMain: main-page-sidebar
 		<meta name="description" content="{{description}}">
 		<meta property="og:description" content="{{description}}">
 		<meta name="keywords" content="{{keywords}}">
-		<meta property="og:url" content="{{common.domain}}">
-		<link rel="canonical" href="{{common.domain}}">
-		<link rel="alternate" type="application/rss+xml" href="{{common.domain}}feed/main" title="{{title}}">
-		<link rel="alternate" type="application/rss+xml" href="{{common.domain}}feed/main" title="{{title}}">
+		<meta property="og:url" content="{{common.domain}}/">
+		<link rel="canonical" href="{{common.domain}}/">
+		<link rel="alternate" type="application/rss+xml" href="{{common.domain}}/feed/main" title="{{title}}">
+		<link rel="alternate" type="application/rss+xml" href="{{common.domain}}/feed/main" title="{{title}}">
 		{% include "./_source/head.html" %}
 		<link rel="stylesheet" href="styles/style.css">
 		<meta name="yandex-verification" content="">
@@ -28,7 +28,7 @@ divSideBarMain: main-page-sidebar
 				"@type": "WebSite",
 				"name": "Винтовые сваи {{contacts.city}}",
 				"alternateName": "Винтовые сваи {{contacts.city}}. {{contacts.city}}",
-				"url": "{{common.domain}}"
+				"url": "{{common.domain}}/"
 			}
 		</script>
 		<script type='application/ld+json'>
@@ -36,10 +36,10 @@ divSideBarMain: main-page-sidebar
 				"@context": "http://www.schema.org",
 				"@type": "LocalBusiness",
 				"name": "Винтовые сваи {{contacts.city}}",
-				"url": "{{common.domain}}",
+				"url": "{{common.domain}}/",
 				"sameAs": "{{common.vkPage}}",
-				"logo": "{{common.domain}}img/logo/logo.png",
-				"image": "{{common.domain}}img/content/jpg/@2x/t01.jpg",
+				"logo": "{{common.domain}}/img/logo/logo.png",
+				"image": "{{common.domain}}/img/content/jpg/@2x/t01.jpg",
 				"description": "Винтовые сваи в {{city.label1(contacts.city)}} с установкой под ключ - продажа материалов от производителя. Монтаж фундаментов под ключ",
 				"address": {
 					"@type": "PostalAddress",
@@ -69,7 +69,7 @@ divSideBarMain: main-page-sidebar
 				"@context": "http://schema.org",
 				"@type": "ImageObject",
 				"contentLocation": "Винтовые сваи {{contacts.city}} от производителя. Россия",
-				"contentUrl": "{{common.domain}}img/logo/logo.png",
+				"contentUrl": "{{common.domain}}/img/logo/logo.png",
 				"description": "Винтовые сваи {{contacts.city}} от производителя.",
 				"name": "Винтовые сваи в {{city.label1(contacts.city)}}"
 			}
@@ -81,7 +81,7 @@ divSideBarMain: main-page-sidebar
 				"serviceType": "Установка фундаментов на винтовых сваях под ключ в {{city.label1(contacts.city)}}",
 				"provider": {
 					"@type": "LocalBusiness",
-					"image": "{{common.domain}}img/logo/logo.png",
+					"image": "{{common.domain}}/img/logo/logo.png",
 					"priceRange": "$$",
 					"address": {
 						"@type": "PostalAddress",
