@@ -1,0 +1,64 @@
+---
+
+---
+{% import "./_source/city.html" as city %}
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Ошибка 404 - Страница не найдена</title>
+		<meta name="description" content="Ошибка 404 - Страница не найдена">
+		<meta name="keywords" content="ошибка 404">
+		<meta property="og:title" content="Ошибка 404 - Страница не найдена">
+		<meta property="og:description" content="Ошибка 404 - Страница не найдена">
+		<meta property="og:url" content="{{common.domain}}404/">
+		<link rel="canonical" href="{{common.domain}}404/">
+		{% include "./_source/head.html" %}
+		<link rel="stylesheet" href="../styles/style.css">
+	</head>
+	<body>
+		{% include "./_source/header.html" %}
+		<main class="wrapper" data-page="404">
+			<div class="wrapper_body container">
+				{% include "./_source/sidebar.html" %}
+				<section class="wrapper_column wrapper_column--main">
+					<ul class="breadcrumb">
+						<li><a href="../">Винтовые сваи {{common.city}}</a></li>
+						<li class="active">Страница не найдена</li>
+					</ul>
+					<div class="title mg2-1"><h2>Страница не найдена. Ошибка 404.</h2></div><br>
+					<section class="error-list">
+						<div class="title v2"><h2>Возможно вы искали:</h2></div>
+						<div class="error-list_body">
+							<a href="../vintovie-svai-57-mm" class="error-list_item"><div class="error-list_text">Винтовые сваи 57 мм</div></a>
+							<a href="../vintovie-svai-76-mm" class="error-list_item"><div class="error-list_text">Винтовые сваи 76 мм</div></a>
+							<a href="../vintovie-svai-89-mm" class="error-list_item"><div class="error-list_text">Винтовые сваи 89 мм</div></a>
+							<a href="../vintovie-svai-108-mm" class="error-list_item"><div class="error-list_text">Винтовые сваи 108 мм</div></a>
+
+							<a href="../vintovoi-svainyi-fundament" class="error-list_item"><div class="error-list_text">Фундамент на винтовых сваях</div></a>
+							<a href="../vintovoi-svainyi-fundament-pod-dom" class="error-list_item"><div class="error-list_text">Дом на винтовых сваях</div></a>
+							<a href="../karkasnyi-dom-na-vintovyh-svayah" class="error-list_item"><div class="error-list_text">Каркасный дом на винтовых сваях</div></a>
+							<a href="../banya-na-vintovyh-svayah" class="error-list_item"><div class="error-list_text">Баня на винтовых сваях</div></a>
+							<a href="../garazh-na-vintovyh-svayah" class="error-list_item"><div class="error-list_text">Гараж на винтовых сваях</div></a>
+							<a href="../vintovye-svai-dlya-zabora" class="error-list_item"><div class="error-list_text">Забор на винтовых сваях</div></a>
+							<a href="../besedka-na-vintovyh-svayah" class="error-list_item"><div class="error-list_text">Беседка на винтовых сваях</div></a>
+							<a href="../naves-na-vintovyh-svayah" class="error-list_item"><div class="error-list_text">Навес на винтовых сваях</div></a>
+							<a href="../vorota-na-vintovyh-svayah" class="error-list_item"><div class="error-list_text">Ворота на винтовых сваях</div></a>
+							<a href="../pirs-na-vintovyh-svayah" class="error-list_item"><div class="error-list_text">Пирс на винтовых сваях</div></a>
+							<a href="../terrasa-na-vintovyh-svayah" class="error-list_item"><div class="error-list_text">Терраса на винтовых сваях</div></a>
+							<a href="../vintovye-svai-dlya-teplitsi" class="error-list_item"><div class="error-list_text">Теплицы на винтовых сваях</div></a>
+
+							<a href="../montazh-vintovih-svay" class="error-list_item"><div class="error-list_text">Монтаж винтовых свай</div></a>
+							<a href="../arenda-yamobura" class="error-list_item"><div class="error-list_text">Аренда ямобура</div></a>
+							<a href="../zamena-fundamenta" class="error-list_item"><div class="error-list_text">Замена фундамента</div></a>
+							<a href="../podnyatie-doma" class="error-list_item"><div class="error-list_text">Поднятие дома</div></a>
+						</div>
+					</section>
+				</section>
+			</div>
+		</main>
+		{% include "./_source/modal.html" %}
+		{% include "./_source/footer.html" %}
+		<script src="../scripts/main.js"></script>
+	</body>
+</html>

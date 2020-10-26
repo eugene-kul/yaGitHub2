@@ -1,0 +1,61 @@
+//Миксины=========================================================================================================================//
+@mixin animation1($name,$time,$delay){animation: $name $time infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-webkit-animation: $name $time infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-moz-animation: $name $time infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-o-animation: $name $time infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;}
+@mixin animation2($name,$time,$delay){animation: $name $time infinite linear $delay;-webkit-animation: $name $time infinite linear $delay;-moz-animation: $name $time infinite linear $delay;-o-animation: $name $time infinite linear $delay;}
+
+@mixin anim($time,$delay){-webkit-transition:all $time ease $delay;-moz-transition: all $time ease $delay;-ms-transition: all $time ease $delay;-o-transition: all $time ease $delay;transition: all $time ease $delay;}
+@mixin anim_cubic($time,$delay){-webkit-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-moz-transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-ms-transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-o-transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;}
+@mixin anim_cubic2($time,$delay){-webkit-transition:all $time cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-moz-transition: all $time cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-ms-transition: all $time cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-o-transition: all $time cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;transition: all $time cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;}
+@mixin rotate($deg){-moz-transform:rotate($deg);-ms-transform:rotate($deg);-webkit-transform:rotate($deg);-o-transform:rotate($deg);transform:rotate($deg);}
+@mixin scale($num){-moz-transform:scale($num);-ms-transform:scale($num);-webkit-transform:scale($num);-o-transform:scale($num);transform:scale($num);}
+@mixin flexbox(){display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;}
+@mixin flexboxinline(){display:-webkit-inline-flex;display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display: inline-flex;}
+@mixin flexorder($val){-webkit-box-ordinal-group:$val;-moz-box-ordinal-group:$val;-ms-flex-order:$val;-webkit-order:$val;order:$val;}
+@mixin adaptiv-font($pcSize, $mobSize) {$addSize: $pcSize - $mobSize;$addMobSize: $addSize + $addSize * 0.75;
+	@media (max-width:$md3+px) {font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maketmw}));}
+	@media (min-width:$md3+px) {font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maketmw}));}
+}
+@mixin adaptiv-lh($pcSize, $mobSize) {$addSize: $pcSize - $mobSize;$addMobSize: $addSize + $addSize * 0.75;
+	@media (max-width:$md3+px) {line-height: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maketmw}));}
+	@media (min-width:$md3+px) {line-height: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maketmw}));}
+}
+//================================================================================================================================//
+
+//@extend==========================================================================================================================//
+//colors===========================================================================================================================//
+$colorDef: #4eb171;
+$colorDefTr: #4eb17100;
+$secondColorDef: #f8a81b;
+$secondColorDefTr: #f8a71b00;
+$secondColorDef2: #ffc107;
+
+$hoverColor1: #75c28e;
+$hoverColor1Tr: #75c28d00;
+$hoverColor2: #95d0a8;
+$hoverColor3: #c68006;
+$hoverColor4: #ffeacc;
+$hoverColor5: #fef3e1;
+
+$bgColor1: #f1f4f0;
+$bdColor1: #93a6b9;
+$bdColor2: #a4c29f;
+
+$colorDefOpac: #53b374cc;
+$colorDefOpac2:#53b37480;
+$colorDefOpac3:#53b37460;
+
+$colorDefFooter:#ddd;
+$colorFooter: rgba(255,255,255,0.5);
+
+$textColor2: #333;
+//=================================================================================================================================//
+//Переменные=======================================================================================================================//
+$minwidth:320px;
+$maketmw:1920; 	// max-width макета
+$stockmw:1000; 	// max-width контента
+$mw:1040; 			// max-width whith padding
+$md1:$mw+12; 		//@media max-width #1
+$md2:992.98; 		//@media max-width #2
+$md3:767.98; 		//@media max-width #3
+$md4:479.98; 		//@media max-width #4
+$md5h:567.99; 		//@media max-height #1
+//=================================================================================================================================//

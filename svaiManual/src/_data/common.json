@@ -1,0 +1,78 @@
+{
+	"city": "Кемерово",
+	"addressRegion": {"r1":"Кемеровская","r2":"Кемеровской"},
+	"postalCode": "630129",
+	"address": "Кемеровская, 77",
+	"cityCode": "383",
+	"shortPhoneNumber": "227-96-42",
+	"phoneNumber": "(800) 555-35-35",
+	"email": "info@info-kemerovo.ru",
+	"internalEmail": "test@ya-mobile.ru",
+	"workingTime": "Ежедневно: 9:00 - 20:00",
+	"workingTimeEn": "Mo-Su 09:00-20:00",
+	"directorsFullName": "Иванов Иван Иванович",
+	"oooOrIp": "111",
+	"innOrKpp": "222",
+	"ogrnOrOgrnip": "333",
+	"bankCurrentAccount": "444",
+	"banksBik": "555",
+	"vkPage": "https://vk.com/zongtong",
+	"instPage": "https://instagram.com/group",
+	"facebookPage": "https://facebook.com/group",
+	"youtubePage": "https://youtube.com/group",
+	"ym-callback-widget": "yes",
+	"logo": "photo",
+	"venyooId": "0000000000000000",
+	"callibri": "yes",
+	"envybox": "00000000000000000000000000000000",
+	"domain": "https://svai-vintovye-kem.ru/",
+	"phoneViber": "9991112233",
+	"phoneWhatsUp": "9991112233",
+	"geo": {
+		"latitude": "53.2605796",
+		"longitude": "49.9179003"
+	},
+	"price": {
+		"d57": {
+			"s500":"590",
+			"s1000":"850",
+			"s1500":"950",
+			"s2000":"1070",
+			"s2500":"1170",
+			"s3000":"1300",
+			"s3500":"1400",
+			"s4000":"1550"
+		},
+		"d76": {
+			"s500":"0",
+			"s1000":"890",
+			"s1500":"1130",
+			"s2000":"1270",
+			"s2500":"1450",
+			"s3000":"1620",
+			"s3500":"1800",
+			"s4000":"2000"
+		},
+		"d89": {
+			"s500":"0",
+			"s1000":"1060",
+			"s1500":"1320",
+			"s2000":"1560",
+			"s2500":"1750",
+			"s3000":"1930",
+			"s3500":"2100",
+			"s4000":"2300"
+		}
+		,
+		"d108": {
+			"s500":"0",
+			"s1000":"0",
+			"s1500":"1540",
+			"s2000":"1860",
+			"s2500":"2080",
+			"s3000":"2300",
+			"s3500":"2520",
+			"s4000":"2750"
+		}
+	}
+}

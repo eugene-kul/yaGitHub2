@@ -1,0 +1,75 @@
+---
+pageName: dostavka
+---
+{% import "./_source/city.html" as city %}
+{% set title = 'Доставка винтовых свай для фундамента от производителя в ' + city.label1(common.city) %}
+{% set description = 'Доставка винтовых свай с антикоррозийным покрытием от производителя в ' + city.label1(common.city) + '. Разумные цены. Скидки! Монтаж. Гарантия 3 года.' %}
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>{{title}}</title>
+	<meta property="og:title" content="{{title}}">
+	<meta name="description" content="{{description}}">
+	<meta property="og:description" content="{{description}}">
+	<meta name="keywords" content="винтовые сваи, доставка, разгрузка, погрузка, {{common.city}}, цена, купить, установка, монтаж">
+	<meta property="og:url" content="{{common.domain}}{{pageName}}/">
+	<link rel="canonical" href="{{common.domain}}{{pageName}}/">
+	<link rel="alternate" type="application/rss+xml" href="{{common.domain}}feed/{{pageName}}" title="{{title}}">
+	<link rel="alternate" type="application/rss+xml" href="{{common.domain}}feed/{{pageName}}" title="{{title}}">
+	{% include "./_source/head.html" %}
+	<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+	{% include "./_source/header.html" %}
+	<main class="wrapper" data-page="4">
+		<div class="wrapper_body container">
+			{% include "./_source/sidebar.html" %}
+			<section class="wrapper_column wrapper_column--main">
+				<ul class="breadcrumb">
+					<li><a href="../">Винтовые сваи {{common.city}}</a></li>
+					<li class="active">Доставка винтовых свай</li>
+				</ul>
+				<div class="title v2 mg2-1">
+					<h1>Доставка винтовых свай в {{ city.label1(common.city) }}</h1>
+					<span class="text">{{description}} Наш телефон <a href="tel:8{{common.phoneNumber}}" class="callibri-phone" id="phone6">8 {{common.phoneNumber}}</a>. Звоните!</span>
+				</div>
+				<section class="payment-page">
+					<div class="payment-page_body">
+						<div class="payment-page_item">
+							<h2 class="payment-page_item-title">Доставка винтовых свай по {{ city.label2(common.city) }} и области</h2>
+							<div class="payment-page_item-text">Осуществляем нашу деятельность по городу {{common.city}} и области.</div>
+						</div>
+						<div class="payment-page_item">
+							<div class="payment-page_item-title">Стоимость и условия</div>
+							<div class="payment-page_item-text">
+								<span>Мы предлагаем доставку материалов по {{ city.label2(common.city) }} и область, удобными и максимально экономичными способами, по предварительной договоренности.</span>
+								<span>Доставка производится грузовыми транспортными средствами в зависимости от характера груза (размер, объем, тоннаж и пр.) по средним городским ценам транспортных компаний.</span>
+								<span>Доставка по городу оплачивается по часам, а доставка за город оценивается по километражу.</span>
+							</div>
+						</div>
+						<div class="payment-page_item">
+							<div class="payment-page_item-title">Самовывоз со склада</div>
+							<div class="payment-page_item-text">
+								<span>Во время оформления заказа менеджеры спрашивают об удобном для Вас варианте и времени доставки.</span>
+								<span>Если хотите забрать товар самостоятельно, скажите об этом при оформлении на сайте или менеджеру. Мы сообщим Вам время работы складов и адреса,где можно забрать материалы.</span>
+							</div>
+						</div>
+						<div class="payment-page_item">
+							<div class="payment-page_item-title">Стоимость доставки</div>
+							<div class="payment-page_item-text">
+								<span>Цена доставки – сугубо индивидуальная, водители в городе берут почасовую оплату, а перевозка на большие расстояния обычно оценивается по удалённости объекта и считается по километрам.</span>
+								<span>Услуги манипулятора, также оцениваются по часам. Если необходимо разгрузить фуру по месту, лучше нанять манипулятор отдельно. Погрузка на складе осуществляется бесплатно.</span>
+								<span>Мы работаем с разными транспортными компаниями и подберём для Вас наиболее оптимальную цену доставки груза. Уточняйте подробности у менеджеров.</span>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+		</div>
+	</main>
+	{% include "./_source/modal.html" %}
+	{% include "./_source/footer.html" %}
+	<script src="../scripts/main.js"></script>
+</body>
+</html>

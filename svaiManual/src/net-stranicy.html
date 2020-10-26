@@ -1,0 +1,73 @@
+---
+pageName: net-stranicy
+---
+{% import "./_source/city.html" as city %}
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Ошибка. Страница в разработке</title>
+	<meta property="og:title" content="Ошибка. Страница в разработке">
+	<meta property="og:description" content="Ошибка. Страница в разработке.">
+	<meta name="description" content="Ошибка. Страница в разработке.">
+	<meta name="keywords" content="ошибка, страница в разработке">
+	<meta property="og:url" content="{{common.domain}}{{pageName}}/">
+	<link rel="canonical" href="{{common.domain}}{{pageName}}/">
+	<link rel="alternate" type="application/rss+xml" href="{{common.domain}}feed/{{pageName}}" title="{{title}}">
+	<link rel="alternate" type="application/rss+xml" href="{{common.domain}}feed/{{pageName}}" title="{{title}}">
+	{% include "./_source/head.html" %}
+	<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+	{% include "./_source/header.html" %}
+	<main class="wrapper">
+		<div class="wrapper_body container">
+			{% include "./_source/sidebar.html" %}
+		<section class="wrapper_column wrapper_column--main">
+			<ul class="breadcrumb">
+				<li><a href="../">Винтовые сваи {{common.city}}</a></li>
+				<li class="active">Страница в разработке</li>
+			</ul>
+			<div class="title v2 v2-1 mg2-1"><h2>Страница в разработке</h2></div>
+			<section class="form v1">
+				<div class="form_body">
+					<div class="form_column">
+						<div class="form_text"><h2>Есть вопросы? </h2> <p>Позвоните нам! </p> <p>Или оставьте заявку и мы Вам перезвоним</p></div>
+						<div class="form_tel"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"><path fill="#012849" d="M3.52 7.45c1.2 2.477 3.13 4.503 5.492 5.763l1.834-1.93c.229-.24.558-.31.846-.214a9.076 9.076 0 0 0 2.975.499c.462 0 .833.389.833.875v3.062c0 .486-.37.875-.833.875C6.842 16.38.5 9.721.5 1.505c0-.486.375-.875.833-.875H4.25c.462 0 .833.39.833.875 0 1.09.167 2.144.475 3.124a.91.91 0 0 1-.204.888L3.521 7.45z"/></svg><a href="tel:8{{common.phoneNumber}}" class="callibri-phone" id="phone8">8 {{common.phoneNumber}}</a></div>
+						<div class="form_image"><img src="../images/content/notPage01.png" alt="Страница в разработке"></div>
+					</div>
+					<div class="form_column">
+						<form action="#!" method="POST" onsubmit="yaCounter66443812.reachGoal('noPage');" id="noPage" name="Остались вопросы? Напишите нам!" class="form-light">
+							<div class="form-light_title"><p>Остались вопросы?</p> <p>Напишите нам!</p></div>
+							<div class="form-light_input-body input-name">
+								<span class="placeholder">Ваше имя</span>
+								<input autocomplete="off" type="text" title="Ваше имя" name="Имя">
+							</div>
+							<div class="form-light_input-body input-phone">
+								<span class="placeholder">Номер телефона</span>
+								<input autocomplete="off" type="tel" required="" title="Номер телефона" name="Телефон" pattern="[\+]{1}[7]{1}[\(]{1}[9]{1}[0-9]{2}[\)]{1}[0-9]{3}[\-]{1}[0-9]{2}[\-]{1}[0-9]{2}" placeholder="+7 (XXX) XXX XX-XX" class="tel">
+							</div>
+							<button type="submit" class="form-light_btn btn">Получить консультацию</button>
+							<span class="personal-data">Нажимая на кнопку, я даю свое согласие на <a href="../personal.pdf" target="_blank">обработку персональных данных</a></span>
+						</form>
+						<div class="w-form-done">
+							<div class="div-block-9">
+								<div class="text-block-22">Спасибо!</div>
+								<div class="text-block-23">Ваша заявка принята</div>
+								<img src="../images/Форма-отправлена.svg" alt="Форма-отправлена" class="image-99">
+							</div>
+						</div>
+						<div class="w-form-fail">
+							<div>Oops! Что-то пошло не так, Ошибка отправки формы. Пожалуйста, перезагрузите страницу.</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</section>
+		</div>
+	</main>
+	{% include "./_source/modal.html" %}
+	{% include "./_source/footer.html" %}
+	<script src="../scripts/main.js"></script>
+</body>
+</html>

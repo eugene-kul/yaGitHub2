@@ -1,0 +1,225 @@
+.footer {
+	position: relative;
+	z-index: 2;
+	background-color: $colorDefFooter;
+	margin: 40px 0px 0px 0px;
+	.container {
+		@media (max-width:$md3+px) {padding: 0;}
+	}
+	&_body {
+		@include flexbox();
+		justify-content: space-between;
+		@media (max-width:$md3+px) {flex-direction: column;}
+	}
+	&_column {
+		text-align: center;
+	}
+	.logo {margin-right: 0%;
+		@media (max-width:$md3+px) {width: 290px;margin: 0px auto 10px;}
+	}
+	.text-block {
+		background-color: #ccc;
+		max-width: 100%;
+		@include flexbox();
+		align-items: flex-end;
+		flex-direction: column;
+		padding: 0px 0px 15px 0px;
+		@media (max-width:$md3+px) {padding: 0px 0px 65px 0px;}
+		&_text {
+			margin: 0px auto 0px;
+			font-size: 13px;
+			line-height: 15px;
+			max-width: 1000px;
+			padding: 0px 40px;
+			span {font-weight: 500;}
+			p {margin: 0px 0px 5px 0px;}
+			@media (max-width:$md3+px) {padding: 0px 0px;max-width: 300px;text-align: center;margin: 0px auto 0px;font-size: 12px;}
+		}
+		&_logo-ya-mobile {
+			color: $textColor2;
+			padding: 10px 20px;
+			margin: 5px auto;
+			font-size: 16px;
+			flex: 1 1 30%;
+			svg {
+				path{fill: $colorDef;}
+				width: 100px;
+				height: 100%;
+				position: relative;
+				top: 1px;
+			}
+			@media (max-width:$md4+px) {font-size: 14px;text-align: center;}
+			&:hover{
+				svg {
+					path{fill:#3c67d0;}
+				}
+			}
+		}
+	}
+}
+
+.column-list {
+	flex: 1 1 33%;
+	padding: 0px 0px 20px 0px;
+	background-color: $colorFooter;
+	color: $textColor2;
+	text-align: left;
+	@media (max-width:$md3+px) {text-align: center;padding: 5px 10px;margin: 0px 0px 10px 0px;}
+	&_text {
+		font-size: 18px;
+		letter-spacing: 0.5px;
+		padding: 0px 20px;
+		margin: 10px 0px 15px 0px;
+		@media (max-width:$md3+px) {margin: 0px 0px 5px 0px;width: 100%;text-align: center;}
+	}
+	&_list {
+		@include flexbox();
+		flex-wrap: wrap;
+		text-align: left;
+	}
+	&_link {
+		flex: 1 1 50%;
+		max-width: 50%;
+		font-size: 14px;
+		@media (max-width:$md3+px) {flex: 1 1 25%;text-align: center !important;}
+		@media (max-width:$md3+px) {flex: 1 1 45%;}
+		a {
+			width: 90%;
+			display: inline-block;
+			padding: 6px 0px 6px 20px;
+			color: $textColor2;
+			font-weight: 500;
+			&:hover{color: #fff;background-color: $colorDef;}
+			@media (max-width:$md3+px) {
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				padding: 12px 5px;
+				margin: 0px 0px 5px;
+				font-size: 13px;
+				width: 90%;
+			}
+			@media (max-width:$md4+px) {width: 95%;}
+		}
+		&.main {
+			display: inline-block;
+			color: $textColor2;
+			width: 45%;
+			margin: 0px 0px 0px 0px;
+		}
+	}
+}
+
+.column-address {
+	padding: 20px 15px 20px;
+	flex: 1 1 33%;
+	@media (max-width:$md3+px) {padding: 5px 10px;margin: 0px 0px 5px 0px;}
+	&_text {
+		color: $textColor2;
+		width: 100%;
+		text-align: center;
+		font-size: 18px;
+		letter-spacing: 0.5px;
+		margin: 0px 0px 15px 0px;
+	}
+	&_body {
+		@include flexbox();
+		flex-wrap: wrap;
+		flex-direction: column;
+		@media (max-width:$md3+px) {}
+	}
+	&_tel {
+		font-weight: 700;
+		font-size: 20px;
+		margin: 0px 0px 5px 0px;
+		a {
+			display: inline-block;
+			padding: 5px 0px;
+			color: $textColor2;
+			height: 100%;
+			width: 100%;
+		}
+		&:hover{a{color: #fff;background-color: $colorDef;}}
+	}
+	&_address {
+		color: $textColor2;
+		font-size: 16px;
+		padding: 5px 0px;
+		margin: 0px 0px 5px 0px;
+		span {display: inline-block;}
+		&:hover{color: #fff;background-color: $colorDef;}
+	}
+	&_social-list {
+		@include flexbox();
+		justify-content: center;
+		margin: 5px 0px 0px 0px;
+		@media (max-width:$md4+px) {flex-wrap: wrap;}
+	}
+}
+
+.column-form {
+	padding: 20px 0px 20px;
+	flex: 1 1 33%;
+	@media (max-width:$md3+px) {padding: 5px 10px;margin: 0px 0px 10px 0px;}
+	&_text {
+		width: 100%;
+		text-align: center;
+		font-size: 14px;
+		color: $textColor2;
+		margin: 0px 0px 10px 0px;
+		span {
+			display: block;
+			font-size: 11px;
+			&:nth-child(1) {font-size: 18px;margin: 0px 0px 5px 0px;}
+		}
+	}
+	&_form {
+		position: relative;
+		.w-form-done {
+			img {
+				width: 50px;
+				height: 50px;
+			}
+		}
+	}
+	&_body {
+		form {
+			@include flexboxinline();
+			flex-direction: column;
+			position: relative;
+			input {
+				border-radius: 5px;
+				border: 1px solid #555;
+				background-color: #f8f8f8;
+				font-size: 14px;
+				padding: 13px 10px;
+				margin: 0px 0px 5px 0px;
+				&:focus {border: 1px solid $secondColorDef;}
+			}
+			label {
+				color: $textColor2;
+				text-align: left;
+				position: relative;
+				border-radius: 10px;
+				font-size: 10px;
+				padding: 0px 5px 0px 25px;
+				margin: 5px 0px 0px 0px;
+				@media (max-width:$md3+px) {margin: 10px 0px 0px 0px;}
+				a {
+					color: $textColor2;
+					display: inline;
+					text-decoration: underline;
+					&:hover{color: $secondColorDef;}
+				}
+			}
+		}
+	}
+	&_title {
+		font-size: 22px;
+		color: $textColor2;
+		margin: 0px 0px 5px 0px;
+	}
+	&_input-phone {}
+	&_btn {
+		width: 100%;
+	}
+}

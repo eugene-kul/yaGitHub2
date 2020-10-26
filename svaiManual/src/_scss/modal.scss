@@ -1,0 +1,716 @@
+.modal {
+	opacity: 0;
+	visibility: hidden;
+	border-radius: 5px;
+	overflow: hidden;
+	width: 100%;
+	max-width: 900px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+	box-shadow: 0 3px 20px 5px rgba(255, 255, 255, 0.2); 
+	text-align: center;
+	border-radius: 10px;
+	background-color: #fff;
+	transition: 0.3s all;
+	&.active {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.modalConsult {
+	.w-form-done {z-index: 10}
+	.w-form-fail {z-index: 10}
+	@include anim(0.3s,0s);
+	@include flexbox();
+	align-items: center;
+	max-width: 700px;
+	@media (max-width:$md3+px) {flex-direction: column;align-items: stretch;max-width: 80%}
+	@media (max-width:$md4+px) {max-width: 90%}
+	&_text {
+		.text {display: inline-block !important}
+		color: $colorDef;
+		position: relative;
+		z-index: 3;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 24px;
+		padding: 20px 20px 10px 10px;
+		margin: 10px 0 10px 0;
+		span {display: block;font-size: 24px}
+		@media (max-width:$md3+px) {font-size: 20px;line-height: 24px;padding: 15px 15px 10px 15px;margin: 0;width: 100%}
+		@media (max-width:$md4+px) {font-size: 18px;line-height: 22px;padding: 15px 10px 10px}
+		mark {color: $colorDef;text-decoration: underline;font-weight: 700;
+			@media (max-width:$md3+px) {display: block}
+		}
+	}
+	&_image {
+		flex: 1 1 40%;
+		margin: 0 0 0 20px;
+		position: relative;
+		z-index: 1;
+		@media (max-width:$md3+px) {display: none}
+		img {
+			object-position: 50% 50%;
+			object-fit: cover;
+			width: 100%;
+		}
+	}
+	&_form {
+		position: relative;
+		flex: 1 1 60%;
+		background-color: #fff;
+	}
+	&_btn {
+		width: 100%;
+		@media (max-width:$md3+px) {
+			height: 44px;
+			font-size: 16px;
+			margin: 0 0 5px 0;
+		}
+	}
+	&.froze, &.byPiles {
+		align-items: stretch;
+		.modalConsult_text {
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 22px;
+			span {
+				font-size: 26px;
+				line-height: 28px;
+				font-weight: 700;
+				display: block;
+				@media (max-width:$md3+px) {padding: 0 15px;font-size: 22px;line-height: 24px}
+			}
+			mark {text-decoration: none}
+		}
+		.modalConsult_image {margin: 0;img {height: 100%}}
+	}
+	&.byPiles {
+		.modalConsult_text {
+			font-size: 26px;
+			@media (max-width:$md3+px) {font-size: 22px}
+			span {
+				display: inline-block;
+				@media (max-width:$md3+px) {padding: 0}
+				@media (max-width:$md4+px) {display: block}
+			}
+		}
+		.modalConsult_image {
+			padding: 20px 0 20px 0;
+			flex: 1 1 10%;
+			overflow: hidden;
+			img {
+				margin: 0 0 0 10px;
+				width: 100%;
+				object-position: 100% 0%;
+			}
+		}
+	}
+}
+
+.modalQwiz {
+	max-width: 900px;
+	@media (max-width:$md2+px) {max-width: 760px}
+	@media (max-width:$md3+px) {max-width: 470px}
+	@media (max-width:$md4+px) {max-width: 320px}
+	mark {color: $secondColorDef}
+	&_title {
+		color: $textColor2;
+		border-bottom: 1px solid #ccc;
+		@include flexbox();
+		align-items: center;
+		justify-content: center;
+		font-size: 18px;
+		font-weight: 400;
+		padding: 15px 0;
+		position: relative;
+		mark {
+			color: $secondColorDef;
+			font-weight: 700;
+			margin: 1px 0 0 0;
+			border-bottom: 1px solid $secondColorDef;
+			@media (max-width:$md3+px) {margin: 5px 0 0 0}
+		}
+		span {position: relative;margin: 0 7px 0 0}
+		svg {
+			position: absolute;
+			top: -4px;
+			left: -10px;
+			height: 25px;
+			margin: 0 5px 0 0;
+		}
+		@media (max-width:$md3+px) {
+			flex-direction: column;
+			font-size: 16px;
+		}
+		@media (max-width:$md4+px) {font-size: 16px}
+	}
+	&_body {
+		form {
+			.personal-data {
+				padding: 0 70px;
+				@media (max-width:$md2+px) {padding: 0 30px}
+				@media (max-width:$md3+px) {padding: 0 10px}
+			}
+			position: relative;
+			font-size: 25px;
+			.btn-next-form {
+				display: none;
+				position: absolute;
+				height: 38px;
+				bottom: -49px;
+				right: 60px;
+				z-index: 2;
+				border: 1px solid #fff;
+				cursor: pointer;
+				color: #fff;
+				font-size: 16px;
+				background-color: $secondColorDef;
+				border: 1px solid  $secondColorDef;
+				border-radius: 5px;
+				padding: 0 20px;
+				line-height: 36px;
+				svg {path{fill: #fff}position: relative;top: 7px;}
+				@media (max-width:$md3+px) {right: 10px;bottom: -59px;line-height: 38px;svg {top: 6px;}}
+				@media (max-width:$md4+px) {right: 20px}
+				&:hover{
+					border-color: $hoverColor3;
+					background-color: $hoverColor3;
+				}
+				&.active {
+					display: inline-block;
+				}
+			}
+		}
+	}
+	&_steps {
+		@include anim_cubic2(0.5s,0s);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 100%;
+		background-color: #fff;
+		z-index: -1;
+		padding: 40px 20px 50px;
+		&.prev {left: -100%}
+		&.active {left: 0;z-index: 1}
+		&.next {left: 100%}
+		@media (max-width:$md3+px) {padding: 10px}
+	}
+	&_steps-title {
+		width: 100%;
+		flex: 1 1 100%;
+		font-size: 24px;
+		margin: 0 0 40px 0;
+		@media (max-width:$md3+px) {margin: 0 0 20px 0;font-size: 16px}
+		@media (max-width:$md4+px) {}
+	}
+	&_steps-body {
+		@include flexbox();
+		font-size: 18px;
+		flex-direction: column;
+		.text {
+			display: inline-block;
+			font-size: 24px;
+			padding: 10px 20px;
+			margin: 0 0 10px 0;
+			@media (max-width:$md3+px) {
+				padding: 5px 20px;
+				font-size: 16px;
+				margin: 0 0 5px 0;
+				flex: 1 1 60%;
+			}
+		}
+	}
+	&_steps-column {
+		flex: 1 1 50%;
+		position: relative;
+		@media (max-width:$md3+px) {
+			text-align: left;
+			@include flexbox();
+			align-items: center;
+		}
+		@media (max-width:$md4+px) {
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+		}
+		.personal-data {
+			@media (max-width:$md3+px) {font-size: 10px}
+		}
+	}
+	&_step1 {
+		position: relative;
+		@media (max-width:$md3+px) {margin: 0 0 10px 0}
+	}
+	// &_step2 {}
+	&_step3 {
+		padding: 10px;
+		.modalQwiz_steps-column {
+			&:nth-child(1) {flex: 1 1 50%}
+			&:nth-child(2) {flex: 1 1 50%}
+			@media (max-width:$md3+px) {margin: 10px 0 0 0}
+			@media (max-width:$md4+px) {margin: 0}
+		}
+	}
+	// &_step4 {}
+	&_step5 {
+		padding: 30px 20px 0px;
+		@media (max-width:$md2+px) {padding: 20px 20px 0px;}
+		@media (max-width:$md3+px) {padding: 0px 15px 0px;}
+		@media (max-width:$md4+px) {padding: 10px 10px 0px;}
+		.modalQwiz_steps-column {
+			&:nth-child(1) {flex: 1 1 50%;
+				@include flexbox();
+			}
+			&:nth-child(2) {flex: 1 1 50%;margin: 20px 20px 0 20px}
+			@media (max-width:$md3+px) {
+				flex-direction: column;
+				&:nth-child(1) {flex: 1 1 55%}
+				&:nth-child(2) {flex: 1 1 45%;margin: 10px 10px 0 10px}
+			}
+			@media (max-width:$md4+px) {margin: 10px 0 0 0}
+		}
+		.modalQwiz_steps-body {
+			flex-direction: row;
+			@media (max-width:$md4+px) {flex-direction: column}
+		}
+	}
+	&_step5-title {
+		text-align: left;
+		color: #f00;
+		position: relative;
+		font-weight: 700;
+		font-size: 50px;
+		padding: 0px 5px;
+		max-width: 500px;
+		line-height: 38px;
+		span {
+			position: absolute;
+			font-size: 150px;
+			line-height: 108px;
+			bottom: 0px;
+			right: 0px;
+		}
+		@media (max-width:$md2+px) {
+			font-size: 40px;
+			line-height: 32px;
+			margin: 20px 0px 0px 0px;
+			span {
+				font-size: 120px;
+				line-height: 90px;
+			}
+		}
+		@media (max-width:$md3+px) {
+			font-size: 33px;
+			line-height: 27px;
+			span {
+				font-size: 100px;
+				line-height: 75px;
+				margin: 0px 0px 0px 0px;
+			}
+		}
+		@media (max-width:$md4+px) {
+			font-size: 40px;
+			line-height: 40px;
+			text-align: center;
+			padding: 0px 5px 0px 5px;
+			margin: 0px 0px 0px 0px;
+			span {
+				color: $secondColorDef;
+				z-index: -1;
+				right: 10px;
+				font-size: 120px;
+				line-height: 95px;
+			}
+		}
+	}
+	&_step5-text {
+		text-align: left;
+		font-size: 18px;
+		padding: 0 5px;
+		line-height: 20px;
+		max-width: 400px;
+		margin: 0px 0px 0px 0px;
+		@media (max-width:$md2+px) {
+			font-size: 16px;
+			line-height: 18px;
+			margin: -10px 0px 0px 0px;
+		}
+		@media (max-width:$md3+px) {
+			margin: 15px 0px 0px 0px;
+			font-size: 14px;
+			line-height: 14px;
+		}
+		@media (max-width:$md4+px) {
+			text-align: center;
+			font-size: 16px;
+			line-height: 18px;
+		}
+	}
+	&_step5-arrow {
+		height: 80px;
+		margin: 0px 0px 0px -25px;
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+		@media (max-width:$md2+px) {margin: -10px 0px 0px -25px;}
+		@media (max-width:$md3+px) {display: none;}
+	}
+	&_step5-image {
+		width: 100px;
+		height: 100%;
+		img {
+			height: 270px;
+		}
+		@media (max-width:$md3+px) {display: none;}
+	}
+	&_radio-body {
+		@include flexbox();
+		justify-content: space-between;
+		@media (max-width:$md3+px) {
+			justify-content: space-between;
+			flex-wrap: wrap;
+			flex: 1 1 50%;
+			@media (orientation: landscape) {margin: 0 0 10px 0}
+		}
+		&.v2 {
+			flex-wrap: wrap;
+			//justify-content: flex-start;
+			justify-content: space-between;
+			.modalQwiz_radio {
+				margin: 0 5px 10px 5px;
+				flex: 0 1 30%;
+				width: auto;
+				@media (max-width:$md3+px) {flex: 1 1 30%}
+				@media (max-width:$md4+px) {flex: 1 1 100%}
+				input {
+					width: 18px;
+					height: 18px;
+					left: 15px;
+					bottom: 50%;
+					@media (max-width:$md3+px) {left: 10px}
+				}
+				label {
+					background-color: transparent;
+					max-width: 100%;
+					text-align: left;
+					padding: 5px 5px 5px 30px;
+					&:hover{background-color: rgba(0,0,0,0.25)}
+					span {padding: 0}
+					@media (max-width:$md3+px) {padding: 7px 5px 7px 35px}
+				}
+			}
+		}
+		&.v3 {
+			.modalQwiz_radio {
+				input {
+					bottom: -20px;
+					@media (max-width:$md3+px) {bottom: 50%}
+				}
+				label {
+					background-color: #fff;
+					span {
+						padding: 5px 15px 5px 15px;
+						@media (max-width:$md3+px) {padding: 5px 0}
+					}
+					img {
+						width: 50px;
+						height: 100px;
+						margin: 0 auto 0;
+						object-fit: cover;
+						object-position: 0% 100%;
+					}
+					&:hover{
+						background-color: rgba(0,0,0,0);
+						@media (max-width:$md3+px) {
+							background-color: rgba(0,0,0,0.25);
+						}
+						span {
+							background-color: rgba(0,0,0,0.25);
+							@media (max-width:$md3+px) {background-color: rgba(0,0,0,0)}
+						}
+					}
+				}
+			}
+		}
+	}
+	&_radio {
+		position: relative;
+		display: inline-block;
+		margin: 0 5px 20px 5px;
+		@media (max-width:$md3+px) {
+			margin: 0 0 10px 0;
+			text-align: left;
+			flex: 1 1 45%;
+		}
+		@media (max-width:$md4+px) {flex: 1 1 100%}
+		input {
+			position: absolute;
+			width: 25px;
+			height: 25px;
+			bottom: 38px;
+			left: 50%;
+			z-index: 1;
+			transform: translate(-50%, 50%);
+			@media (max-width:$md3+px) {
+				transform: translate(0%, 50%);bottom: 50%;left: 10px;
+				width: 18px;height: 18px;
+			}
+			&:checked+label {border-color: $colorDef}
+		}
+		label {
+			background-color: #f8f8f8;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			overflow: hidden;
+			@include flexbox();
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100%;
+			width: 100%;
+			max-width: 140px;
+			font-size: 16px;
+			font-weight: 700;
+			overflow: hidden;
+			&:hover{background-color: rgba(0,0,0,0.25)}
+			@media (max-width:$md2+px) {max-width: 120px;font-size: 12px}
+			@media (max-width:$md3+px) {max-width: 100%;white-space: nowrap;padding: 3px 10px 3px 30px;margin: 0 0;background-color: transparent}
+			@media (max-width:$md4+px) {padding: 5px 20px 5px 40px}
+			span {
+				width: 100%;
+				border-radius: 0 0 5px 5px;
+				display: inline-block;
+				padding: 20px 15px 5px 15px;
+				margin: 0 0;
+				@media (max-width:$md3+px) {
+					position: relative;
+					border-radius: 0;
+					background-color: transparent;
+					color: $textColor2;
+					padding: 5px;
+					height: 100%;
+				}
+			}
+			img {
+				width: 100%;
+				height: 100px;
+				object-fit: cover;
+				object-position: 50% 50%;
+				@media (max-width:$md2+px) {height: 100px}
+				@media (max-width:$md3+px) {display: none}
+			}
+		}
+	}
+	&_input-area-block {
+		flex: 1 1 40%;
+		@include flexbox();
+		flex-direction: column;
+	}
+	&_input-area {
+		position: relative;
+		max-width: 400px;
+		margin: 5px auto 5px;
+		@media (max-width:$md3+px) {}
+		@media (max-width:$md4+px) {max-width: 300px}
+		&.active {input {border-color: $colorDef !important}}
+		.placeholder {
+			color: #777;
+			font-size: 14px;
+			&.active {
+				background-color: #f9f9f9;
+				color: $colorDef;
+				font-size: 12px;
+			}
+			@media (max-width:$md3+px) {&.active {font-size: 11px;top: -2px}}
+		}
+		.label {
+			@include flexbox();
+			align-items: center;
+			font-size: 16px;
+			color: #777;
+			border-radius: 0 5px 5px 0;
+			border-left: none;
+			background-color: #f8f8f8;
+			width: auto;
+			padding: 3px 10px;
+			position: absolute;
+			top: 50%;
+			right: 1px;
+			transform: translate(0%, -50%);
+			span {
+				font-size: 14px;
+				position: relative;
+				top: -2px;
+			}
+			@media (max-width:$md3+px) {font-size: 14px;span{font-size: 12px;top: -4px}}
+		}
+		input {
+			border: 1px solid #888;
+			background-color: #f8f8f8;
+			font-size: 20px;
+			border-radius: 5px;
+			width: 100%;
+			padding: 5px 10px;
+			@media (max-width:$md3+px) {
+				padding: 5px 10px;font-size: 14px;
+			}
+		}
+	}
+	&_input-body {
+		width: 100%;
+		max-width: 300px;
+		display: inline-block;
+		border: 1px solid #fff;
+		position: relative;
+		height: 47px;
+		margin: 0 0 15px 0;
+		border-top: 2px solid transparent;
+		border-bottom: 2px solid #ccc;
+		@media (max-width:$md3+px) {height: 35px;margin: 0 0 10px 0}
+		@media (max-width:$md4+px) {height: 30px}
+		.placeholder {
+			font-size: 16px;
+			color: #777;
+			&.active {font-size: 12px;top: -2px}
+		}
+		input {
+			width: 100%;
+			height: 100%;
+			padding: 0 10px;
+			font-size: 14px;
+		}
+	}
+	&_input-name {
+		.placeholder {
+			&.active{color: $colorDef}
+		}
+		&.active {border-bottom-color: $colorDef !important}
+	}
+	&_input-phone {
+		.placeholder {
+			font-size: 0;
+			&.active{color: $colorDef}
+		}
+		&.active {border-bottom-color: $colorDef !important}
+	}
+	&_btn {
+		white-space: nowrap;
+		width: 100%;
+		max-width: 300px;
+	}
+	&_bottom-row {
+		@include flexbox();
+		align-items: center;
+		justify-content: flex-end;
+		position: relative;
+		background-color: #fff;
+		border-top: 1px solid #ccc;
+	}
+	&_pagination {
+		line-height: 60px;
+		color: $textColor2;
+		font-size: 13px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		padding: 0 180px 0 0;
+		@media (max-width:$md4+px) {padding: 0 200px 0 0}
+		.value {font-weight: 700;font-size: 18px}
+	}
+	&_btn-block {
+		white-space: nowrap;
+		padding: 10px 60px;
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+		@media (max-width:$md3+px) {padding: 10px 10px}
+		@media (max-width:$md4+px) {padding: 10px 20px}
+		.btn-prev {
+			cursor: pointer;
+			display: none;
+			border: 2px solid #999;
+			background-color: transparent;
+			padding: 9px 20px 8px 20px;
+			border-radius: 5px;
+			margin: 0 10px 0 0;
+			svg {path{fill: #999}}
+			transform:scale(-1,1);
+			&:hover{
+				border-color: $hoverColor3;
+				background-color: $hoverColor3;
+				svg {path{fill: #fff}}
+			}
+			&.active {display: inline-block}
+		}
+		.btn-next {
+			display: inline-block;
+			font-size: 16px;
+			border-radius: 5px;
+			opacity: 0;
+			cursor: pointer;
+			color: #fff;
+			background-color: $secondColorDef;
+			border: 1px solid  $secondColorDef;
+			padding: 10px 20px;
+			max-height: 38px;
+			svg {path{fill: #fff}}
+			&.active {opacity: 1;
+				svg {path{fill: #fff}}
+				&:hover{
+					border-color: $hoverColor3;
+					background-color: $hoverColor3;
+				}
+			}
+		}
+	}
+}
+
+.btn-close {
+	@include anim(0.2s,0s);
+	position: absolute;
+	border-radius: 5px;
+	width: 25px;
+	height: 25px;
+	top: 5px;
+	right: 5px;
+	z-index: 2000;
+	svg {
+		path{fill:$textColor2}
+		width: 100%;
+		height: 100%;
+		padding: 5px;
+		opacity: 0.65;
+	}
+	&:hover{
+		background-color: rgba(0,0,0,0.1);
+		svg {opacity: 1}
+	}
+	&:active {svg {padding: 4px}}
+}
+
+.overlay {
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 900;
+	transition: .3s all;
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+}

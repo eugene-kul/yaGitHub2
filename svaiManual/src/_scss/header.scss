@@ -1,0 +1,580 @@
+.header {
+	background-color: $bgColor1;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	margin: -118px 0 0 0;
+	&_body {}
+	&_row {}
+}
+
+.info-row {
+	background-color: $colorDef;
+	max-height: 28px;
+	height: 28px;
+	&_body {
+		@include flexbox();
+		justify-content: space-between;
+	}
+	&_column {
+		&:nth-child(1) {}
+		&:nth-child(2) {
+			@media (max-width:$md4+px) {display: none;}
+		}
+		&:nth-child(3) {
+			@media (max-width:$md3+px) {display: none;}
+		}
+	}
+	&_icon {
+		margin: 0 5px 0 0;
+		svg {
+			path{fill: #fff;}
+			width: 15px;
+			height: 100%;
+		}
+	}
+	&_item {
+		white-space: nowrap;
+		@include flexbox();
+		justify-content: center;
+		align-items: center;
+		font-size: 12px;
+		color: #fff;
+		height: 100%;
+		padding: 3px 10px 1px 10px;
+		&:hover{background-color: $hoverColor1;}
+		mark {color: #fff;}
+		@media (max-width:$md3+px) {}
+	}
+	&_address {}
+	&_mail {}
+	&_mode {
+		cursor: default;
+	}
+}
+
+.top-row {
+	background-color: $bgColor1;
+	&.container {
+		margin: 0 auto 0;
+		padding: 0 10px;
+		@media (max-width:$md2+px) {padding: 0;}
+	}
+	@media (max-width:$md3+px) {height: 90px;}
+	&_body {
+		@include flexbox();
+		justify-content: space-between;
+		align-items: center;
+		height: 90px;
+		@media (max-width:$md2+px) {
+			flex-direction: column;
+			align-items: flex-end;
+			padding: 5px 10px 0;
+		}
+		@media (max-width:$md3+px) {
+			padding: 0 10px 0;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	&_column {
+		flex: 0 1 33%;
+		&:nth-child(2) {text-align: center;}
+		&:nth-child(3) {text-align: right;}
+		padding: 0 10px;
+		position: relative;
+		@media (max-width:$md2+px) {
+			&:nth-child(1) {
+				position: absolute;
+				top: calc(50% - 50px);
+				left: 20px;
+			}
+			&:nth-child(2) {}
+			&:nth-child(3) {}
+			@include flexboxinline();
+			justify-content: center;
+			flex-wrap: wrap;
+			align-items: center;
+			padding: 0 0;
+			margin: 0 0 5px 0;
+		}
+		@media (max-width:$md3+px) {
+			&:nth-child(1) {position: static;flex: 1 1 60%;}
+			&:nth-child(2) {flex-direction: column;flex: 1 1 40%;}
+			&:nth-child(3) {display: none;}
+			&:nth-child(4){display: none;}
+		}
+		@media (max-width:$md4+px) {
+			&:nth-child(1) {flex: 1 1 100px;}
+			&:nth-child(2) {flex: 1 1 40%;}
+		}
+	}
+	&_social-text {
+		display: block;
+		font-size: 16px;
+		font-weight: 700;
+		padding: 0 5px 0 0;
+		text-align: center;
+		@media (max-width:$md4+px) {font-size: 0;}
+	}
+	&_social-list {
+		@include flexbox();
+		justify-content: center;
+		padding: 5px 0;
+		@media (max-width:$md4+px) {
+			flex-wrap: wrap;
+			padding: 0;
+		}
+	}
+	&_social-link {
+		a {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			position: relative;
+			&:after {
+				content:"";
+				border-radius: 5px;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0px;
+				left: 0px;
+				opacity: 0.4;
+			}
+		}
+		cursor: pointer;
+		margin: 0 5px;
+		border-radius: 5px;
+		width: 30px;
+		height: 30px;
+		@media (max-width:$md3+px) {margin: 0 3px;}
+		@media (max-width:$md4+px) {margin: 5px;flex: 0 0 25%;}
+		svg {
+			pointer-events: none;
+			path{fill:#fff;}
+			width: 100%;
+			height: 100%;
+			padding: 3px;
+			position: relative;
+			z-index: 1;
+		}
+		&.whatsApp {background-color: #29a329;}
+		&.viber {background-color: #7d3daf;}
+		&.vk {background-color: #5181b8}
+		&.v1 {background-color: #dd4132;}
+		&.v2 {background-color: #0099ff;}
+		&.v3 {background-color: $secondColorDef;}
+		&.v1, &.v2, &.v3 {
+			position: relative;
+			&:before {
+				content:"";
+				border-radius: 5px;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0px;
+				left: 0px;
+				opacity: 0.4;
+			}
+			span {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0px;
+				left: 0px;
+			}
+			&:hover{&:before{background-color: #0f0;}}
+		}
+		&:hover{a:after{background-color: #0f0;}}
+	}
+	&_tel {
+		@include flexboxinline();
+		justify-content: flex-end;
+		align-items: center;
+		white-space: nowrap;
+		margin: 0 5px 5px 0;
+		padding: 2px 0 0 0;
+		a {font-weight: 700;font-size: 20px;color: $textColor2;&:hover{text-decoration: underline;}}
+		svg {width: 20px;height: 20px;path{fill: $colorDef;}margin: 0 5px 0 0;}
+		@media (max-width:$md2+px) {margin: 0 10px 0 0;}
+	}
+	&_btn {
+		cursor: pointer;
+		letter-spacing: 0.5px;
+		font-size: 16px;
+		white-space: nowrap;
+		display: inline-block;
+		color: #fff;
+		font-weight: 700;
+		background-color: $secondColorDef;
+		border-radius: 2px;
+		text-align: center;
+		height: 30px;
+		padding: 0 21px;
+		line-height: 30px;
+		margin: 5px 0 0 0;
+		&:hover{background-color: $hoverColor3;}
+		@media (max-width:$md2+px) {margin: 0;}
+		@media (max-width:$md3+px) {display: none;}
+	}
+}
+
+.bottom-row {
+	background-color: $colorDef;
+	position: relative;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+	&_body {
+		position: relative;
+		@media (max-width:$md3+px) {height: 55px;}
+		&.container {
+			@media (max-width:$md2+px) {padding: 0 0;}
+		}
+	}
+	&_tel {
+		display: none;
+		white-space: nowrap;
+		overflow: hidden;
+		@media (max-width:$md3+px) {display: inline-block;}
+		position: relative;
+		a {
+			color: #fff;
+			padding: 0 10px 0 45px;
+			line-height: 55px;
+			display: inline-block;
+			height: 100%;
+			width: 100%;
+			font-size: 22px;
+		}
+		&:before {
+			content:"";
+			@include animation2(btn,12s,5s);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: -100%;
+			background: linear-gradient(45deg, $colorDefTr 20%, $colorDef 50%, $colorDefTr 80%);
+		}
+		&:hover{
+			background-color: $hoverColor1;
+			&:before {
+				background: linear-gradient(45deg, $hoverColor1Tr 20%, $hoverColor1 50%, $hoverColor1Tr 80%);
+			}
+		}
+		svg {
+			@include animation2(tel,12s,4s);
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			padding: 6px;
+			top: calc(50% - 20px);
+			left: 5px;
+			margin: 0 0 0 0;
+			path{fill:#fff;}
+		}
+	}
+	&_menu-icon {
+		//border: 1px solid #000;
+		border-radius: 5px;
+		display: none;
+		cursor: pointer;
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		top: 50%;
+		right: 10px;
+		z-index: 50;
+		margin: -20px 0 0 0;
+		@media (max-width:$md4+px) {right: 5px;}
+		span {
+			@include anim(0.2s,0s);
+			position: absolute;
+			top: 0;
+			left: 3px;
+			display: inline-block;
+			width: 32px;
+			height: 4px;
+			background-color: #fff;
+			margin: -2px 0 0 0;
+			&:nth-child(1) {top: 25%;}
+			&:nth-child(2) {top: 50%;}
+			&:nth-child(3) {top: 75%;}
+		}
+		&.active {
+			span {
+				&:nth-child(1) {top: 50%;@include rotate(45deg);}
+				&:nth-child(2) {@include scale(0);}
+				&:nth-child(3) {top: 50%;@include rotate(-45deg);}
+			}
+		}
+		&:hover{span {background-color: $secondColorDef;}}
+		@media (max-width:$md3+px) {display: inline-block;}
+	}
+	&_menu-list {
+		@include flexbox();
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 0 0;
+		@media (max-width:$md3+px) {
+			@include anim(0.3s,0s);
+			position: fixed;
+			z-index: -1;
+			flex-wrap: nowrap;
+			background-color: $colorDef;
+			width: 280px;
+			height: 100%;
+			top: 50px;
+			right: -100%;
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: flex-start;
+			overflow: auto;
+			padding: 55px 0 200px 0;
+			&.active {
+				right: 0;
+			}
+		}
+	}
+	&_overflow {
+		display: none;
+		@include anim(0.1s,0s);
+		background-color: rgba(0,0,0,0.5);
+		position: fixed;
+		top: 0;
+		right: -100%;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+		@media (max-width:$md3+px) {display: inline-block;}
+		&.active{right: 0;}
+	}
+	&_menu-links {
+		&.calc {
+			border: none;
+			@media (max-width:$md3+px) {border-top: 1px solid $bdColor2;}
+			span {
+				cursor: pointer;
+				width: 100%;
+				height: 100%;
+				color: $textColor2;
+				font-weight: 700;
+				background-color: #fff;
+				border: 2px solid $colorDef;
+				@include flexbox();
+				align-items: center;
+				justify-content: center;
+				padding: 0 15px;
+				font-size: 16px;
+				@media (max-width:$md3+px) {
+					padding: 5px 10px;
+					border-left: none;
+					border-right: 5px solid transparent;
+				}
+			}
+			svg {
+				width: 25px;
+				height: 25px;
+				margin: 8px 10px 8px 0;
+				path {fill: $secondColorDef;}
+				@media (max-width:$md3+px) {margin: 8px 10px 8px 0;}
+			}
+			&:hover{
+				span {color: #fff;background-color: $hoverColor1;}
+				svg {path {fill: #fff;}}
+			}
+			@media (max-width:$md3+px) {
+				span {
+					border-top: none;
+					border-bottom: none;
+					justify-content: flex-end;
+				}
+			}
+		}
+		border-right: 1px solid rgba(255,255,255,0.25);
+		border-left: 1px solid rgba(255,255,255,0.25);
+		flex: 1 1 auto;
+		text-align: center;
+		position: relative;
+		@media (max-width:$md3+px) {
+			@include flexbox();
+			flex-wrap: wrap;
+			overflow: hidden;
+			flex: 0 0 auto;
+			margin: 0;
+			border: none;
+			border-bottom: 1px solid $bdColor2;
+			width: 100%;
+			z-index: -1;
+			text-align: right;
+		}
+		&:nth-child(2) {
+			@media (max-width:$md3+px) {border-top: 1px solid $bdColor2;}
+		}
+		&.active {
+			a {cursor: default;
+				background-color: $bgColor1;
+				color: $colorDef;
+				&:hover{background-color: $bgColor1;}
+			}
+			.spMain {background-color: $bgColor1;color: $colorDef;
+				&:hover{background-color: $hoverColor1;color: #fff;&:before, &:after {background-color: #fff;}}
+				&:before, &:after {background-color: $colorDef;}
+			}
+			.spSub {a {background-color: $colorDef;color: #fff;}}
+		}
+		&:hover{
+			@media (min-width:$md3+px) {
+				.spSub {transform: translate(0%, 0%);height: auto;}
+			}
+		}
+		.spMain {
+			flex: 1 1 100%;
+			width: 100%;
+			height: 100%;
+			color: #fff;
+			font-size: 16px;
+			padding: 15px 20px 15px 8px;
+			display: inline-block;
+			position: relative;
+			z-index: 1;
+			background-color: $colorDef;
+			@media (max-width:$md3+px) {height: auto;}
+			&:before, &:after {
+				content:"";
+				@include anim(0.1s,0s);
+				position: absolute;
+				top: 22px;
+				width: 8px;
+				height: 2px;
+				background-color: #fff;
+				@media (max-width:$md3+px) {top: 22px;width: 10px;}
+			}
+			&:before {right: 23px;@include rotate(45deg);
+				@media (max-width:$md2+px) {right: 10px;}
+				@media (max-width:$md3+px) {right: 22px;}
+			}
+			&:after {right: 18px;@include rotate(-45deg);
+				@media (max-width:$md2+px) {right: 5px;}
+				@media (max-width:$md3+px) {right: 16px;}
+			}
+			@media (max-width:$md3+px) {
+				border-right: 5px solid transparent;
+				cursor: pointer;
+				font-size: 16px;
+				padding: 15px 40px 15px 8px;
+				&.active {
+					&:before {@include rotate(-45deg);}
+					&:after {@include rotate(45deg);}
+				}
+			}
+			&:hover{
+				border-right-color: $secondColorDef;
+				background-color: $hoverColor1;
+			}
+		}
+		.spSub {
+			background-color: $colorDef;
+			position: absolute;
+			display: inline-block;
+			overflow: hidden;
+			top: 46px;
+			left: 0;
+			height: 0;
+			z-index: 2;
+			width: 100%;
+			transform: translate(0%, -100%);
+			a {
+				&:nth-child(1) {border-top: 1px solid $bdColor2;}
+				border-bottom: 1px solid $bdColor2;
+				cursor: pointer;
+				&:hover{
+					background-color: $hoverColor1;
+				}
+			}
+			@media (max-width:$md3+px) {
+				z-index: -1;
+				@include anim(0.2s,0s);
+				position: static;
+				a {
+					font-size: 14px;
+					color: $textColor2 !important;
+					background-color: $bgColor1 !important;
+					&:hover{
+						background-color: $hoverColor4 !important;
+					}
+				}
+				&.active {
+					transform: translate(0%, 0%);
+					height: auto;
+				}
+			}
+		}
+		a {
+			display: inline-block;
+			width: 100%;
+			padding: 15px 8px;
+			color: #fff;
+			font-size: 16px;
+			@media (max-width:$md3+px) {
+				font-size: 16px;
+				padding: 15px 15px;
+				border-right: 6px solid transparent;
+			}
+			&:hover{
+				background-color: $hoverColor1;
+				@media (max-width:$md3+px) {
+					border-right: 6px solid $secondColorDef;
+				}
+			}
+		}
+	}
+}
+
+@keyframes tel {
+	0% {@include rotate (0deg);}
+	3% {@include rotate (0deg);}
+	4% {@include rotate (10deg);}
+	5% {@include rotate (-10deg);}
+	6% {@include rotate (10deg);}
+	7% {@include rotate (-10deg);}
+	8% {@include rotate (10deg);}
+	9% {@include rotate (0deg);}
+	100% {@include rotate (0deg);}
+}
+@-webkit-keyframes tel {
+	0% {@include rotate (0deg);}
+	3% {@include rotate (0deg);}
+	4% {@include rotate (10deg);}
+	5% {@include rotate (-10deg);}
+	6% {@include rotate (10deg);}
+	7% {@include rotate (-10deg);}
+	8% {@include rotate (10deg);}
+	9% {@include rotate (0deg);}
+	100% {@include rotate (0deg);}
+}
+@-o-keyframes btn {
+	0% {@include rotate (0deg);}
+	3% {@include rotate (0deg);}
+	4% {@include rotate (10deg);}
+	5% {@include rotate (-10deg);}
+	6% {@include rotate (10deg);}
+	7% {@include rotate (-10deg);}
+	8% {@include rotate (10deg);}
+	9% {@include rotate (0deg);}
+	100% {@include rotate (0deg);}
+}
+@-moz-keyframes btn {
+	0% {@include rotate (0deg);}
+	3% {@include rotate (0deg);}
+	4% {@include rotate (10deg);}
+	5% {@include rotate (-10deg);}
+	6% {@include rotate (10deg);}
+	7% {@include rotate (-10deg);}
+	8% {@include rotate (10deg);}
+	9% {@include rotate (0deg);}
+	100% {@include rotate (0deg);}
+}

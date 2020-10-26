@@ -1,0 +1,214 @@
+---
+pageName: otzivi
+---
+{% import "./_source/city.html" as city %}
+{% set title = 'Отзывы клиентов о компании - «Свай-фундамент» в ' + city.label1(common.city) %}
+{% set description = 'Реальные отзывы про монтаж винтовых свай. Отзывы об установке винтовых свай и свайных фундаментах и выполненной работе в ' + city.label1(common.city) + '.' %}
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>{{title}}</title>
+	<meta property="og:title" content="{{title}}">
+	<meta name="description" content="{{description}}">
+	<meta property="og:description" content="{{description}}">
+	<meta name="keywords" content="отзывы, сваи, винтовые сваи, {{common.city}}, отзывы клиентов">
+	<meta property="og:url" content="{{common.domain}}{{pageName}}/">
+	<link rel="canonical" href="{{common.domain}}{{pageName}}/">
+	<link rel="alternate" type="application/rss+xml" href="{{common.domain}}feed/{{pageName}}" title="{{title}}">
+	<link rel="alternate" type="application/rss+xml" href="{{common.domain}}feed/{{pageName}}" title="{{title}}">
+	{% include "./_source/head.html" %}
+	<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+	{% include "./_source/header.html" %}
+	{% import "./_source/rewiew.html" as rewiew %}
+	<main class="wrapper" data-page="7">
+		<div class="wrapper_body container">
+			{% include "./_source/sidebar.html" %}
+		<section class="wrapper_column wrapper_column--main">
+			<ul class="breadcrumb">
+				<li><a href="../">Винтовые сваи {{common.city}}</a></li>
+				<li class="active">Галерея винтовых свай</li>
+			</ul>
+			<div class="title v2 mg2-1">
+				<h1>Отзывы клиентов</h1>
+			</div>
+			<section class="reviews-block v2">
+				<div class="title v5">
+					<h2>Реальные отзывы про монтаж винтовых свай. Отзывы об установке винтовых свай и свайных фундаментах и выполненной работе в {{ city.label1(common.city) }}.</h2>
+				</div>
+				<div class="reviews-block_body">
+					{{ rewiew.item('w02.jpg','Мария','11 сентября 2020 г.','Задумались о строительстве загородного дома. Дом из бруса в 2 этажа. Читали различные отзывы, консультировались. Фундамент решили делать на винтовых сваях. По цене приемлемо получилось. Установку свай выполнили быстро (всего 1 день) и без применения техники. Рекомендуем!') }}
+					{{ rewiew.item('w03.jpg','Татьяна','02 сентября 2020 г.','За небольшие деньги приобрели земельный участок в живописном месте около реки. В первую очередь нужно было огородить участок  и установить забор. Поскольку участок около реки, то решено было устанавливать свайный фундамент под забор. С таким крепким забором и возможное наводнение не страшно.') }}
+					{{ rewiew.item('m03.jpg','Константин Александрович','20 августа 2020 г.','На моём неровном участке с перепадами высот и грунтовыми водами самым лучшим вариантом стал только фундамент на винтовых сваях. Построили дом и баньку. Ничего не шатается. Полы в доме идеально ровные.') }}
+					<div class="reviews-block_item">
+						<div class="reviews-block_row">
+							<img class="reviews-block_avatar" src="../images/avatar/m04.jpg" width="80" height="80" alt="Фотография пользователя">
+							<div class="reviews-block_description">
+								<div class="reviews-block_name">Николай</div>
+								<div class="reviews-block_date">13 августа 2020 г.</div>
+							</div>
+						</div>
+						<div class="reviews-block_item-text">Хочу поделиться отзывом о строительстве на свайном фундаменте. Изначально, конечно, хотел делать монолит, но строители отговорили. Местность болотистая, и любые движения грунта могли бы привести к трещинам в фундаменте. А это потом лишние расходы. Остановился на установке свай. Обратился в компанию Свай-фундамент. Менеджер рассчитал точное количество свай. Вся работа заняла пару дней.  Качеством работы остался доволен. Огромное спасибо.</div>
+					</div>
+					<div class="reviews-block_item">
+						<div class="reviews-block_row">
+							<img class="reviews-block_avatar" src="../images/avatar/n03.jpg" width="80" height="80" alt="Фотография пользователя">
+							<div class="reviews-block_description">
+								<div class="reviews-block_name">Константин</div>
+								<div class="reviews-block_date">06 августа 2020 г.</div>
+							</div>
+						</div>
+						<div class="reviews-block_item-text">Теперь я точно могу сказать, что свайный фундамент – лучшее средство для строительства «проблемных» участках. На своём участке с уклоном я построил уже и дом, и баню. Все постройки стоят намертво. Вызывал спецов для проверки. Они подтвердили, что никаких проседаний в свайном фундаменте нет. Фундамент с установкой заказывал в компании «Свай – Фундамент». У них приемлемые цены, гарантия на сваи и на работу.</div>
+					</div>
+					<div class="reviews-block_item">
+						<div class="reviews-block_row">
+							<img class="reviews-block_avatar" src="../images/avatar/m05.jpg" width="80" height="80" alt="Фотография пользователя">
+							<div class="reviews-block_description">
+								<div class="reviews-block_name">Дмитрий</div>
+								<div class="reviews-block_date">02 августа 2020 г.</div>
+							</div>
+						</div>
+						<div class="reviews-block_item-text">Решил построить небольшой дачный дом. Бюджет был сильно ограничен. Изучив информацию в интернете, понял, что оптимальным вариантом фундамента является фундамент на винтовых сваях. Нужно было найти, где купить сваи недорого и желательно от производителя. Свой выбор остановил на компании «Свай-фундамент». Работу сделали быстро и качественно. А главное – не дорого и с гарантией.</div>
+					</div>
+					<div class="reviews-block_item">
+						<div class="reviews-block_row">
+							<img class="reviews-block_avatar" src="../images/avatar/m06.jpg" width="80" height="80" alt="Фотография пользователя">
+							<div class="reviews-block_description">
+								<div class="reviews-block_name">Слава</div>
+								<div class="reviews-block_date">27 июля 2020 г.</div>
+							</div>
+						</div>
+						<div class="reviews-block_item-text">Сосед построил 2-этажную баню на сваях. Не баня – дворец! Посмотрел на свою, где одному –то места мало. Ну, думаю, была - не была.  Сосед сказал, что сваи – удовольствие не из дешёвых. Стал я этот вопрос изучать. Интересовала, конечно, цена сваи. Нашёл компанию-производителя  с самыми приятными для меня ценами. Менеджер всё рассчитал. Установили быстро, гарантию дали. Теперь у меня баня не хуже, чем у соседа!</div>
+					</div>
+					<div class="reviews-block_item">
+						<div class="reviews-block_row">
+							<img class="reviews-block_avatar" src="../images/avatar/n04.jpg" width="80" height="80" alt="Фотография пользователя">
+							<div class="reviews-block_description">
+								<div class="reviews-block_name">Евгений Николаевич</div>
+								<div class="reviews-block_date">20 июля 2020 г.</div>
+							</div>
+						</div>
+						<div class="reviews-block_item-text">Построил дом на свайном фундаменте. Были определённые сомнения и переживания. Не без этого. Когда искал компанию по фундаментам, то быстро понял, что много компаний – банальные перекупы. Цены у них ещё те. С горем пополам выбрал одну компанию. Они сваи сами изготавливают. Приценился, пообщался с их менеджером, потом на участок приехал специалист. Ещё раз всё посмотрел, проверил. Подписали договор. Недели не прошло, а сваи уже установили. А за летний сезон я и дом достроил. Хороший фундамент – гарантия того, что строение будет прочным и долговечным. Спасибо компании за качественно проделанную работу!</div>
+					</div>
+					<div class="reviews-block_item">
+						<div class="reviews-block_row">
+							<img class="reviews-block_avatar" src="../images/avatar/n05.jpg" width="80" height="80" alt="Фотография пользователя">
+							<div class="reviews-block_description">
+								<div class="reviews-block_name">Лариса</div>
+								<div class="reviews-block_date">16 июля 2020 г.</div>
+							</div>
+						</div>
+						<div class="reviews-block_item-text">Долго искали компанию, чтобы поменять фундамент под дачным домом. Зимой дом перекашивает так, что открыть дверь практически невозможно. Многие компании предлагали чуть ли не сносить дом и заново строить. Сами понимаете, это немалые расходы. В компании «Свай – фундамент» предложили поменять наш фундамент на свайный. Цена устроила. Сделали всё быстро. Теперь дом стоит ровно. Проблема с открыванием дверей зимой отпала.</div>
+					</div>
+					<div class="reviews-block_item">
+						<div class="reviews-block_row">
+							<img class="reviews-block_avatar" src="../images/avatar/w08.jpg" width="80" height="80" alt="Фотография пользователя">
+							<div class="reviews-block_description">
+								<div class="reviews-block_name">Ольга</div>
+								<div class="reviews-block_date">11 июля 2020 г.</div>
+							</div>
+						</div>
+						<div class="reviews-block_item-text">Когда затевали строительство дома на дачном участке, то старались продумать всё до мелочей. Самой большой головной болью стал выбор фундамента под дом. Хотелось прочный и долговечный. Компанию-исполнителя искали долго: по отзывам в Интернете, по совету друзей и знакомых. В «Свай – фундаменте» нам предложили сделать фундамент на сваях. Преимущества: недорого, быстрая установка, никаких бетонных растворов и лишнего мусора на участке. Дом стоит уже 2 год. И ещё лет 50 простоит!</div>
+					</div>
+					<div class="reviews-block_item">
+						<div class="reviews-block_row">
+							<img class="reviews-block_avatar" src="../images/avatar/m10.jpg" width="80" height="80" alt="Фотография пользователя">
+							<div class="reviews-block_description">
+								<div class="reviews-block_name">Владимир</div>
+								<div class="reviews-block_date">09 июля 2020 г.</div>
+							</div>
+						</div>
+						<div class="reviews-block_item-text">Несколько лет назад стали счастливыми обладателями 10 соток. Из строений старый щитовой дом и банька, наполовину в землю вросшая. Про фундамент вообще молчу. На семейном совете решили дом пока не трогать, а вот с баней вопрос был решён: снести и построить заново. Фундамент делали на сваях от компании «Свай – фундамент». Почему именно к ним обратились? Эта компания является заводом-изготовителем свай. Тут уж и наценка минимальная. Договор, гарантия – всё как положено. На следующий год будем дом новый строить. И по вопросам фундамента только в «Свай – фундамент».</div>
+					</div>
+					<div class="reviews-block_item">
+						<div class="reviews-block_row">
+							<img class="reviews-block_avatar" src="../images/avatar/m09.jpg" width="80" height="80" alt="Фотография пользователя">
+							<div class="reviews-block_description">
+								<div class="reviews-block_name">Василий</div>
+								<div class="reviews-block_date">02 июля 2020 г.</div>
+							</div>
+						</div>
+						<div class="reviews-block_item-text">Выражаем огромную благодарность компании «Свай - фундамент» в решении нашей проблемы. Наконец-то мы решились поменять полуразвалившийся бетонный фундамент на современный с использованием винтовых свай. Честно говоря, были переживания. Но напрасные. Всё сделали в лучшем виде и в короткие сроки.</div>
+					</div>
+					<div class="reviews-block_item">
+						<div class="reviews-block_row">
+							<img class="reviews-block_avatar" src="../images/avatar/n02.jpg" width="80" height="80" alt="Фотография пользователя">
+							<div class="reviews-block_description">
+								<div class="reviews-block_name">Екатерина</div>
+								<div class="reviews-block_date">29 июня 2020 г.</div>
+							</div>
+						</div>
+						<div class="reviews-block_item-text">Спасибо компании «Свай – фундамент» за качественно проделанную работу. Установили нам качественный винтовой фундамент под дом и под баню. Всего несколько дней прошло от подписания договора до монтажа. Мы бы, наверно, месяц корячились, чтобы бетонный фундамент залить, а потом ещё столько же ждать, пока фундамент затвердеет и можно будет к строительству основному приступать. Вы нам сэкономили время и деньги. Ещё раз спасибо и всех благ!</div>
+					</div>
+					<div class="reviews-block_item">
+						<div class="reviews-block_row">
+							<img class="reviews-block_avatar" src="../images/avatar/m07.jpg" width="80" height="80" alt="Фотография пользователя">
+							<div class="reviews-block_description">
+								<div class="reviews-block_name">Сергей</div>
+								<div class="reviews-block_date">28 июня 2020 г.</div>
+							</div>
+						</div>
+						<div class="reviews-block_item-text">Спасибо компании «Свай – фундамент» за качественно проделанную работу. Установили нам качественный винтовой фундамент под дом и под баню. Всего несколько дней прошло от подписания договора до монтажа. Мы бы, наверно, месяц корячились, чтобы бетонный фундамент залить, а потом ещё столько же ждать, пока фундамент затвердеет и можно будет к строительству основному приступать. Вы нам сэкономили время и деньги. Ещё раз спасибо и всех благ!</div>
+					</div>
+					<div class="reviews-block_item">
+						<div class="reviews-block_row">
+							<img class="reviews-block_avatar" src="../images/avatar/m08.jpg" width="80" height="80" alt="Фотография пользователя">
+							<div class="reviews-block_description">
+								<div class="reviews-block_name">Виктор</div>
+								<div class="reviews-block_date">11 июня 2020 г.</div>
+							</div>
+						</div>
+						<div class="reviews-block_item-text">Вкрутили 35 свай под дом, под баню и хозблок. Обратился в компанию «Свай – фундамент» потому что: 1. Компания сама является изготовителем свай; 2. Нет скрытых условий; 3.Доступные цены; 4. Предоставление гарантии на сваи и работу. Пока что всем доволен. Спасибо.</div>
+					</div>
+					<div class="reviews-block_item">
+						<div class="reviews-block_row">
+							<img class="reviews-block_avatar" src="../images/avatar/m14.jpg" width="80" height="80" alt="Фотография пользователя">
+							<div class="reviews-block_description">
+								<div class="reviews-block_name">Андрей</div>
+								<div class="reviews-block_date">30 мая 2020 г.</div>
+							</div>
+						</div>
+						<div class="reviews-block_item-text">В компании «Свай – фундамент» меня удивило то, как тщательно проводились все расчёты, с учётом площади строений, особенности грунта. Признаюсь, я не очень доверял технологии свайного фундамента, но всё получилось отлично. Сваи делали поздней осенью. Строить дом начали весной. После окончания строительства ни одна свая не дала усадки. Спасибо за качественную работу!</div>
+					</div>
+					<div class="reviews-block_item">
+						<div class="reviews-block_row">
+							<img class="reviews-block_avatar" src="../images/avatar/w07.jpg" width="80" height="80" alt="Фотография пользователя">
+							<div class="reviews-block_description">
+								<div class="reviews-block_name">Кристина</div>
+								<div class="reviews-block_date">14 мая 2020 г.</div>
+							</div>
+						</div>
+						<div class="reviews-block_item-text">Данный отзыв пишу спустя год после обращения в компанию. Делали свайный фундамент в своём СНТ рядом с городом. Специалисты подобрали вариант именно для нашего случая, рассчитали точное количество свай. Посоветовали на чём экономить не стоит. Монтажники сделали всё за день. Дом на таком фундаменте получился отличный. Полы ровные, ничего не трещит и не скрипит.</div>
+					</div>
+					<div class="reviews-block_item">
+						<div class="reviews-block_row">
+							<img class="reviews-block_avatar" src="../images/avatar/m13.jpg" width="80" height="80" alt="Фотография пользователя">
+							<div class="reviews-block_description">
+								<div class="reviews-block_name">Дмитрий</div>
+								<div class="reviews-block_date">03 мая 2020 г.</div>
+							</div>
+						</div>
+						<div class="reviews-block_item-text">У меня все постройки на участке на винтовом фундаменте. Много негатива пишут в интернете про фундамент на винтовых сваях, но, как мне кажется, людям просто не повезло с фирмой или с качеством свай. Я о таком фундаменте могу только хорошее сказать. Сваи у меня с качественным антикоррозийным покрытием. Зиму пережили, никакого намёка на ржавчину нет. В общем, я доволен и другим рекомендую.</div>
+					</div>
+					<div class="reviews-block_item">
+						<div class="reviews-block_row">
+							<img class="reviews-block_avatar" src="../images/avatar/n01.jpg" width="80" height="80" alt="Фотография пользователя">
+							<div class="reviews-block_description">
+								<div class="reviews-block_name">Василий</div>
+								<div class="reviews-block_date">01 мая 2020 г.</div>
+							</div>
+						</div>
+						<div class="reviews-block_item-text">Нам устанавливали свайный фундамент под забор. Оптимальный вариант для участка с уклоном. Сваи с антикоррозийным покрытием. Закручивали через 2 метра. Всего потребовалось 25 свай. Сами сваи + работа – никаких претензий.</div>
+					</div>
+				</div>
+			</section>
+		</section>
+		</div>
+	</main>
+	{% include "./_source/modal.html" %}
+	{% include "./_source/footer.html" %}
+	<script src="../scripts/main.js"></script>
+</body>
+</html>
