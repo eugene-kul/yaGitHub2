@@ -1,0 +1,73 @@
+---
+permalink: /404.html
+---
+{% import "./_source/city.njk" as city %}
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Ошибка 404 - Страница не найдена</title>
+		<meta name="description" content="Ошибка 404 - Страница не найдена">
+		<meta name="keywords" content="ошибка 404">
+		<meta property="og:title" content="Ошибка 404 - Страница не найдена">
+		<meta property="og:description" content="Ошибка 404 - Страница не найдена">
+		<meta property="og:url" content="{{common.domain}}/404/">
+		<link rel="canonical" href="{{common.domain}}/404/">
+		{% include "./_source/head.njk" %}
+		<link rel="stylesheet" href="../styles/style.css">
+	</head>
+	<body>
+		{% include "./_source/header.njk" %}
+		<main class="wrapper" data-page="0">
+			<div class="wrapper_body container">
+				{% include "./_source/sidebar.njk" %}
+				<section class="wrapper_column wrapper_column--main">
+					<nav aria-label="breadcrumb">
+					<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+						<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem' >
+							<a href="{{common.domain}}/" title='Главная' itemprop='item'>
+								<span itemprop='name'>Винтовые сваи {{contacts.city}}</span>
+							</a>
+							<meta itemprop='position' content='1'>
+						</li>
+						<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem' aria-current="page" class="active">
+							<meta itemprop='item' content='{{common.domain}}/404.html'>
+							<span itemprop='name'>Ошибка 404</span>
+							<meta itemprop='position' content='2'>
+						</li>
+					</ul>
+				</nav>
+					<div class="title mg2-1"><h2>Страница не найдена. Ошибка 404.</h2></div><br>
+					<section class="error-list">
+						<div class="title v2"><h2>Возможно вы искали:</h2></div>
+						<div class="error-list_body">
+							<a href="{{common.domain}}/vintovie-svai-57-mm" class="error-list_item"><div class="error-list_text">Винтовые сваи 57 мм</div></a>
+							<a href="{{common.domain}}/vintovie-svai-76-mm" class="error-list_item"><div class="error-list_text">Винтовые сваи 76 мм</div></a>
+							<a href="{{common.domain}}/vintovie-svai-89-mm" class="error-list_item"><div class="error-list_text">Винтовые сваи 89 мм</div></a>
+							<a href="{{common.domain}}/vintovie-svai-108-mm" class="error-list_item"><div class="error-list_text">Винтовые сваи 108 мм</div></a>
+							<a href="{{common.domain}}/vintovoi-svainyi-fundament" class="error-list_item"><div class="error-list_text">Фундамент на винтовых сваях</div></a>
+							<a href="{{common.domain}}/vintovoi-svainyi-fundament-pod-dom" class="error-list_item"><div class="error-list_text">Дом на винтовых сваях</div></a>
+							<a href="{{common.domain}}/karkasnyi-dom-na-vintovyh-svayah" class="error-list_item"><div class="error-list_text">Каркасный дом на винтовых сваях</div></a>
+							<a href="{{common.domain}}/banya-na-vintovyh-svayah" class="error-list_item"><div class="error-list_text">Баня на винтовых сваях</div></a>
+							<a href="{{common.domain}}/garazh-na-vintovyh-svayah" class="error-list_item"><div class="error-list_text">Гараж на винтовых сваях</div></a>
+							<a href="{{common.domain}}/vintovye-svai-dlya-zabora" class="error-list_item"><div class="error-list_text">Забор на винтовых сваях</div></a>
+							<a href="{{common.domain}}/besedka-na-vintovyh-svayah" class="error-list_item"><div class="error-list_text">Беседка на винтовых сваях</div></a>
+							<a href="{{common.domain}}/naves-na-vintovyh-svayah" class="error-list_item"><div class="error-list_text">Навес на винтовых сваях</div></a>
+							<a href="{{common.domain}}/vorota-na-vintovyh-svayah" class="error-list_item"><div class="error-list_text">Ворота на винтовых сваях</div></a>
+							<a href="{{common.domain}}/pirs-na-vintovyh-svayah" class="error-list_item"><div class="error-list_text">Пирс на винтовых сваях</div></a>
+							<a href="{{common.domain}}/terrasa-na-vintovyh-svayah" class="error-list_item"><div class="error-list_text">Терраса на винтовых сваях</div></a>
+							<a href="{{common.domain}}/vintovye-svai-dlya-teplitsi" class="error-list_item"><div class="error-list_text">Теплицы на винтовых сваях</div></a>
+							<a href="{{common.domain}}/montazh-vintovih-svay" class="error-list_item"><div class="error-list_text">Монтаж винтовых свай</div></a>
+							<a href="{{common.domain}}/arenda-yamobura" class="error-list_item"><div class="error-list_text">Аренда ямобура</div></a>
+							<a href="{{common.domain}}/zamena-fundamenta" class="error-list_item"><div class="error-list_text">Замена фундамента</div></a>
+							<a href="{{common.domain}}/podnyatie-doma" class="error-list_item"><div class="error-list_text">Поднятие дома</div></a>
+						</div>
+					</section>
+				</section>
+			</div>
+		</main>
+		{% include "./_source/modal.html" %}
+		{% include "./_source/footer.njk" %}
+		<script src="../scripts/main.js"></script>
+	</body>
+</html>

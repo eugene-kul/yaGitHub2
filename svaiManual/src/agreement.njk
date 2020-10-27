@@ -1,0 +1,51 @@
+---
+
+---
+{% import "./_source/city.njk" as city %}
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Согласие на обработку персональных данных</title>
+		<meta name="description" content="Согласие на обработку персональных данных">
+		<meta name="keywords" content="Согласие на обработку персональных данных">
+		<meta property="og:title" content="Согласие на обработку персональных данных">
+		<meta property="og:description" content="Согласие на обработку персональных данных">
+		<meta property="og:url" content="{{common.domain}}/agreement/">
+		<link rel="canonical" href="{{common.domain}}/agreement/">
+		{% include "./_source/head.njk" %}
+		<link rel="stylesheet" href="../styles/style.css">
+	</head>
+	<body>
+		{% include "./_source/header.njk" %}
+		<main class="wrapper" data-page="0">
+			<div class="wrapper_body container">
+				{% include "./_source/sidebar.njk" %}
+				<section class="wrapper_column wrapper_column--main">
+					<nav aria-label="breadcrumb">
+						<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+							<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem' >
+								<a href="{{common.domain}}/" title='Главная' itemprop='item'>
+									<span itemprop='name'>Винтовые сваи {{contacts.city}}</span>
+								</a>
+								<meta itemprop='position' content='1'>
+							</li>
+							<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem' aria-current="page" class="active">
+								<meta itemprop='item' content='{{common.domain}}/agreement/'>
+								<span itemprop='name'>Пользовательское соглашение</span>
+								<meta itemprop='position' content='2'>
+							</li>
+						</ul>
+					</nav>
+					<div class="title mg2-1"><h1>Пользовательское соглашение</h1></div><br>
+					<section class="agreement">
+						<p style="font-size: 16px;text-align: justify;line-height:20px;">Я даю согласие на использование персональных данных, а также на хранение данных об этих результатах на электронных носителях. Настоящее согласие предоставляется мной на осуществление действий в отношении моих персональных данных, которые необходимы для достижения указанных выше целей, включая (без ограничения) сбор, систематизацию, накопление, хранение, уточнение (обновление, изменение), использование, передачу третьим лицам для осуществления действий по обмену информацией, обезличивание, блокирование персональных данных, а также осуществление любых иных действий, предусмотренных действующим законодательством Российской Федерации. Я проинформирован, что {{common.domain}} гарантирует обработку моих персональных данных в соответствии с действующим законодательством Российской Федерации как неавтоматизированным, так и автоматизированным способами. Данное согласие действует до достижения целей обработки персональных данных или в течение срока хранения информации. Данное согласие может быть отозвано в любой момент по моему письменному заявлению. Я подтверждаю, что, давая такое согласие, я действую по собственной воле и в своих интересах.</p>
+					</section>
+				</section>
+			</div>
+		</main>
+		{% include "./_source/modal.html" %}
+		{% include "./_source/footer.njk" %}
+		<script src="../scripts/main.js"></script>
+	</body>
+</html>

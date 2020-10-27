@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	//подсвечивание активных пунктов в шапке меню
 	let dataPage = document.querySelector('.wrapper').getAttribute('data-page');
-	if (dataPage != '404' && dataPage != null) {
+	if (dataPage != 0 && dataPage != null) {
 		let pageLink = document.querySelector('.bottom-row_menu-links[data-page="' + dataPage + '"]');
 		pageLink.classList.add('active');
 		if (dataPage == 1) {
@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 									<input autocomplete="off" type="tel" required="" title="Номер телефона" pattern="[\+]{1}[7]{1}[\(]{1}[9]{1}[0-9]{2}[\)]{1}[0-9]{3}[\-]{1}[0-9]{2}[\-]{1}[0-9]{2}" name="Телефон" placeholder="+7 (XXX) XXX XX-XX" class="tel">
 								</span>
 								<button type="submit" class="modalConsult_btn btn btn-type1">Отправить заявку</button>
-								<span class="personal-data">Нажимая на кнопку, я даю свое согласие на <a href="${pageIndex}personal.pdf" target="_blank">обработку персональных данных</a></span>
+								<span class="personal-data">Нажимая на кнопку, я даю свое согласие на <a href="{{common.domain}}/agreement" target="_blank">обработку персональных данных</a></span>
 							</form>
 							<div class="w-form-done">
 								<div class="div-block-9">
@@ -435,7 +435,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 												<input tabindex="-1" autocomplete="off" type="tel" required="" title="Номер телефона" pattern="[\+]{1}[7]{1}[\(]{1}[9]{1}[0-9]{2}[\)]{1}[0-9]{3}[\-]{1}[0-9]{2}[\-]{1}[0-9]{2}" name="Телефон" placeholder="+7 (XXX) XXX XX-XX" class="tel">
 											</span>
 											<button tabindex="-1" type="submit" class="modalQwiz_btn btn btn-type1">Получить предложение</button>
-											<span class="personal-data">Нажимая на кнопку, я даю свое согласие на <a href="${pageIndex}personal.pdf" tabindex="-1" target="_blank">обработку персональных данных</a></span>
+											<span class="personal-data">Нажимая на кнопку, я даю свое согласие на <a href="{{common.domain}}/agreement" tabindex="-1" target="_blank">обработку персональных данных</a></span>
 										</div>
 									</div>
 								</div>
@@ -555,7 +555,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 									<input autocomplete="off" type="tel" required="" title="Номер телефона" pattern="[\+]{1}[7]{1}[\(]{1}[9]{1}[0-9]{2}[\)]{1}[0-9]{3}[\-]{1}[0-9]{2}[\-]{1}[0-9]{2}" name="Телефон" placeholder="+7 (XXX) XXX XX-XX" class="tel">
 								</span>
 								<button type="submit" class="modalConsult_btn btn btn-type1">Оставить заявку</button>
-								<span class="personal-data">Нажимая на кнопку, я даю свое согласие на <a href="${pageIndex}personal.pdf" target="_blank">обработку персональных данных</a></span>
+								<span class="personal-data">Нажимая на кнопку, я даю свое согласие на <a href="{{common.domain}}/agreement" target="_blank">обработку персональных данных</a></span>
 							</form>
 							<div class="w-form-done">
 								<div class="div-block-9">
@@ -605,7 +605,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 									<input autocomplete="off" type="tel" required="" title="Номер телефона" pattern="[\+]{1}[7]{1}[\(]{1}[9]{1}[0-9]{2}[\)]{1}[0-9]{3}[\-]{1}[0-9]{2}[\-]{1}[0-9]{2}" name="Телефон" placeholder="+7 (XXX) XXX XX-XX" class="tel">
 								</span>
 								<button type="submit" class="modalConsult_btn btn btn-type1">Оставить заявку</button>
-								<span class="personal-data">Нажимая на кнопку, я даю свое согласие на <a href="${pageIndex}personal.pdf" target="_blank">обработку персональных данных</a></span>
+								<span class="personal-data">Нажимая на кнопку, я даю свое согласие на <a href="{{common.domain}}/agreement" target="_blank">обработку персональных данных</a></span>
 							</form>
 							<div class="w-form-done">
 								<div class="div-block-9">
@@ -637,7 +637,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 									<input autocomplete="off" type="tel" required="" title="Номер телефона" pattern="[\+]{1}[7]{1}[\(]{1}[9]{1}[0-9]{2}[\)]{1}[0-9]{3}[\-]{1}[0-9]{2}[\-]{1}[0-9]{2}" name="Телефон" placeholder="+7 (XXX) XXX XX-XX" class="tel">
 								</span>
 								<button type="submit" class="modalConsult_btn btn btn-type1">Оставить заявку</button>
-								<span class="personal-data">Нажимая на кнопку, я даю свое согласие на <a href="${pageIndex}personal.pdf" target="_blank">обработку персональных данных</a></span>
+								<span class="personal-data">Нажимая на кнопку, я даю свое согласие на <a href="{{common.domain}}/agreement" target="_blank">обработку персональных данных</a></span>
 							</form>
 							<div class="w-form-done">
 								<div class="div-block-9">
@@ -797,7 +797,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		let envyboxScript = document.createElement('script');
 		let envyboxLink = document.createElement('link');
 		envyboxScript.type = 'text/javascript';
-		envyboxScript.src = 'https://cdn.envybox.io/widget/cbk.js?wcb_code=ff051a34b9aff95365563132478084ad';
+		envyboxScript.src = 'https://cdn.envybox.io/widget/cbk.js?wcb_code={{common.venyooId}}';
 		envyboxScript.charset = 'UTF-8';
 		envyboxLink.rel = 'stylesheet';
 		envyboxLink.href = 'https://cdn.envybox.io/widget/cbk.css';
@@ -806,16 +806,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 		window.removeEventListener('scroll', widgets);
 	}
-	//window.addEventListener('scroll', widgets);
-	window.addEventListener('resize', sidebarHeight);
-
-	
-	let sidebar = document.querySelector('.sidebar_body-block');
-	if (dataPage != '404') {sidebar.style.height = window.innerHeight - 70 + 'px'}
-	function sidebarHeight() {
-		if (dataPage != '404') {sidebar.style.height = window.innerHeight - 70 + 'px';}
-	}
-
+	window.addEventListener('scroll', widgets);
+		
 	//отправка формы
 	var punycode = new function Punycode() {
 		this.utf16 = {

@@ -127,6 +127,11 @@
 		flex-direction: column;
 		@media (max-width:$md3+px) {}
 	}
+	&_name {
+		font-size: 18px;
+		font-weight: 700;
+		margin: 0px 0px 10px 0px;
+	}
 	&_tel {
 		font-weight: 700;
 		font-size: 20px;
@@ -139,6 +144,13 @@
 			width: 100%;
 		}
 		&:hover{a{color: #fff;background-color: $colorDef;}}
+	}
+	&_mail {
+		a {color: $textColor2}
+		font-size: 16px;
+		padding: 5px 0px;
+		margin: 0px 0px 5px 0px;
+		&:hover{a {color: #fff}background-color: $colorDef;}
 	}
 	&_address {
 		color: $textColor2;

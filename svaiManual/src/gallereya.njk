@@ -1,0 +1,168 @@
+---
+pageName: gallereya
+---
+{% import "./_source/city.njk" as city %}
+{% set title = 'Фотогалерея выполненых работ в ' + city.label1(contacts.city) + ' - «Свай-фундамент».' %}
+{% set description = 'Фотогралерея работ «Свай-фундамент». Монтаж винтовых свай и фундамента на винтовых сваях в ' + city.label1(contacts.city) + '. Сваи от производителя, гарантия качества, низкие цены.' %}
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>{{title}} Страница 1</title>
+	<meta property="og:title" content="{{title}} Страница 1">
+	<meta name="description" content="{{description}} Страница 1">
+	<meta property="og:description" content="{{description}} Страница 1">
+	<meta name="keywords" content="фото винтовых свай, винтовые сваи, фотогалерея, фото, {{contacts.city}}, установка, монтаж">
+	<meta property="og:url" content="{{common.domain}}/{{pageName}}/">
+	<link rel="canonical" href="{{common.domain}}/{{pageName}}/">
+	<link rel="alternate" type="application/rss+xml" href="{{common.domain}}/feed/{{pageName}}" title="{{title}}">
+	<link rel="alternate" type="application/rss+xml" href="{{common.domain}}/feed/{{pageName}}" title="{{title}}">
+	{% include "./_source/head.njk" %}
+	<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+	{% include "./_source/header.njk" %}
+	<main class="wrapper" data-page="5">
+		<div class="wrapper_body container">
+			{% include "./_source/sidebar.njk" %}
+			<section class="wrapper_column wrapper_column--main">
+				<nav aria-label="breadcrumb">
+					<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+						<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem' >
+							<a href="{{common.domain}}/" title='Главная' itemprop='item'>
+								<span itemprop='name'>Винтовые сваи {{contacts.city}}</span>
+							</a>
+							<meta itemprop='position' content='1'>
+						</li>
+						<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem' aria-current="page" class="active">
+							<meta itemprop='item' content='{{common.domain}}/gallereya/'>
+							<span itemprop='name'>Галерея винтовых свай</span>
+							<meta itemprop='position' content='2'>
+						</li>
+					</ul>
+				</nav>
+				<div class="title v2 mg2-1">
+					<h1>Фотографии винтовых свай в {{ city.label1(contacts.city) }}</h1>
+					<span class="text">{{description}} Наш телефон <a href="tel:8{{contacts.phoneNumber}}" class="callibri-phone" id="phone6">8 {{contacts.phoneNumber}}</a>. Звоните!</span>
+				</div>
+				<section class="photo-block v2">
+					<div class="title v5">
+						<h2>Фото винтовых свай, устройства винтовых фундаментов в {{ city.label1(contacts.city) }}. Живые фотографии с объектов. Фото с монтажных работ</h2>
+					</div>
+					<div class="photo-block_body gallery">
+						<a href="../images/gallery/original/01.jpeg" class="photo-block_item item-photo">
+							<picture class="item-photo_image">
+								<source srcset="../images/gallery/webp/@2x/01.webp 2x, ../images/gallery/webp/01.webp 1x" type="image/webp">
+								<img src="../images/gallery/jpg/01.jpeg" srcset="../images/gallery/jpg/@2x/01.jpeg 2x" width="265" height="190" alt="Замена фундамента на свайно-винтовой">
+							</picture>
+							<span class="item-photo_title">Замена фундамента на свайно-винтовой</span>
+							<span class="item-photo_text"><mark>Материалы:</mark> 20 свай диаметром 89мм, длиной 3000мм, с оголовками</span>
+						</a>
+						<a href="../images/gallery/original/02.jpeg" class="photo-block_item item-photo">
+							<picture class="item-photo_image">
+								<source srcset="../images/gallery/webp/@2x/02.webp 2x, ../images/gallery/webp/02.webp 1x" type="image/webp">
+								<img src="../images/gallery/jpg/02.jpeg" srcset="../images/gallery/jpg/@2x/02.jpeg 2x" width="265" height="190" alt="Фундамент под забор на винтовых сваях">
+							</picture>
+							<span class="item-photo_title">Фундамент под забор на винтовых сваях</span>
+							<span class="item-photo_text"><mark>Материалы:</mark> сваи диаметром 56 мм и 89мм, длиной 4000мм,</span>
+						</a>
+						<a href="../images/gallery/original/03.jpeg" class="photo-block_item item-photo">
+							<picture class="item-photo_image">
+								<source srcset="../images/gallery/webp/@2x/03.webp 2x, ../images/gallery/webp/03.webp 1x" type="image/webp">
+								<img src="../images/gallery/jpg/03.jpeg" srcset="../images/gallery/jpg/@2x/03.jpeg 2x" width="265" height="190" alt="Замена фундамента на свайно-винтовой, дом 5*4 м">
+							</picture>
+							<span class="item-photo_title">Замена фундамента на свайно-винтовой, дом 5*4 м</span>
+							<span class="item-photo_text"><mark>Материалы:</mark> диаметр 89мм, длиной 3м, с оголовками</span>
+						</a>
+						<a href="../images/gallery/original/04.jpeg" class="photo-block_item item-photo">
+							<picture class="item-photo_image">
+								<source srcset="../images/gallery/webp/@2x/04.webp 2x, ../images/gallery/webp/04.webp 1x" type="image/webp">
+								<img src="../images/gallery/jpg/04.jpeg" srcset="../images/gallery/jpg/@2x/04.jpeg 2x" width="265" height="190" alt="Фундамент на винтовых сваях под дом">
+							</picture>
+							<span class="item-photo_title">Фундамент на винтовых сваях под дом</span>
+							<span class="item-photo_text"><mark>Материалы:</mark> 32 сваи диаметром 89мм, длиной 3000мм, с оголовками</span>
+						</a>
+						<a href="../images/gallery/original/05.jpeg" class="photo-block_item item-photo">
+							<picture class="item-photo_image">
+								<source srcset="../images/gallery/webp/@2x/05.webp 2x, ../images/gallery/webp/05.webp 1x" type="image/webp">
+								<img src="../images/gallery/jpg/05.jpeg" srcset="../images/gallery/jpg/@2x/05.jpeg 2x" width="265" height="190" alt="Фундамент на винтовых сваях под баню 3*4 м">
+							</picture>
+							<span class="item-photo_title">Фундамент на винтовых сваях под баню 3*4 м</span>
+							<span class="item-photo_text"><mark>Материалы:</mark> свая 76*3 м. - 12 шт. с оголовками</span>
+						</a>
+						<a href="../images/gallery/original/06.jpeg" class="photo-block_item item-photo">
+							<picture class="item-photo_image">
+								<source srcset="../images/gallery/webp/@2x/06.webp 2x, ../images/gallery/webp/06.webp 1x" type="image/webp">
+								<img src="../images/gallery/jpg/06.jpeg" srcset="../images/gallery/jpg/@2x/06.jpeg 2x" width="265" height="190" alt="Фундамент под дом 3*4 м на винтовых сваях">
+							</picture>
+							<span class="item-photo_title">Фундамент под дом 3*4 м на винтовых сваях</span>
+							<span class="item-photo_text"><mark>Материалы:</mark> 9 свай диаметром 76мм, длиной 2500мм</span>
+						</a>
+						<a href="../images/gallery/original/07.jpeg" class="photo-block_item item-photo">
+							<picture class="item-photo_image">
+								<source srcset="../images/gallery/webp/@2x/07.webp 2x, ../images/gallery/webp/07.webp 1x" type="image/webp">
+								<img src="../images/gallery/jpg/07.jpeg" srcset="../images/gallery/jpg/@2x/07.jpeg 2x" width="265" height="190" alt="Фундамент под пирс">
+							</picture>
+							<span class="item-photo_title">Фундамент под пирс</span>
+							<span class="item-photo_text"><mark>Материалы:</mark> 4 сваи диаметром 76мм, длиной 3000мм</span>
+						</a>
+						<a href="../images/gallery/original/08.jpeg" class="photo-block_item item-photo">
+							<picture class="item-photo_image">
+								<source srcset="../images/gallery/webp/@2x/08.webp 2x, ../images/gallery/webp/08.webp 1x" type="image/webp">
+								<img src="../images/gallery/jpg/08.jpeg" srcset="../images/gallery/jpg/@2x/08.jpeg 2x" width="265" height="190" alt="Фундамент на винтовых сваях под каркасный дом 6*4 м">
+							</picture>
+							<span class="item-photo_title">Фундамент на винтовых сваях под каркасный дом 6*4 м</span>
+							<span class="item-photo_text"><mark>Материалы:</mark> сваи – 89мм, длина 3000 мм; количество свай – 15 штук; Оголовки 200х200 мм; монтаж – 1 день;</span>
+						</a>
+						<a href="../images/gallery/original/09.jpeg" class="photo-block_item item-photo">
+							<picture class="item-photo_image">
+								<source srcset="../images/gallery/webp/@2x/09.webp 2x, ../images/gallery/webp/09.webp 1x" type="image/webp">
+								<img src="../images/gallery/jpg/09.jpeg" srcset="../images/gallery/jpg/@2x/09.jpeg 2x" width="265" height="190" alt="Винтовые сваи под фундамент для дома 4*4 м">
+							</picture>
+							<span class="item-photo_title">Винтовые сваи под фундамент для дома 4*4 м</span>
+							<span class="item-photo_text"><mark>Материалы:</mark> винтовые сваи 89мм, длиной 3000мм, 12 штук, без оголовков, монтаж за 1 день</span>
+						</a>
+						<a href="../images/gallery/original/10.jpeg" class="photo-block_item item-photo">
+							<picture class="item-photo_image">
+								<source srcset="../images/gallery/webp/@2x/10.webp 2x, ../images/gallery/webp/10.webp 1x" type="image/webp">
+								<img src="../images/gallery/jpg/10.jpeg" srcset="../images/gallery/jpg/@2x/10.jpeg 2x" width="265" height="190" alt="Винтовые сваи под забор с воротами">
+							</picture>
+							<span class="item-photo_title">Винтовые сваи под забор с воротами</span>
+							<span class="item-photo_text"><mark>Материалы:</mark> винтовые сваи – 76х4000 мм;количество винтовые сваи – 20 штук; срок монтажа – 1 день;</span>
+						</a>
+						<a href="../images/gallery/original/11.jpeg" class="photo-block_item item-photo">
+							<picture class="item-photo_image">
+								<source srcset="../images/gallery/webp/@2x/11.webp 2x, ../images/gallery/webp/11.webp 1x" type="image/webp">
+								<img src="../images/gallery/jpg/11.jpeg" srcset="../images/gallery/jpg/@2x/11.jpeg 2x" width="265" height="190" alt="Винтовые сваи под дом 3*3 с перепадом высоты грунта">
+							</picture>
+							<span class="item-photo_title">Винтовые сваи под дом 3*3 с перепадом высоты грунта</span>
+							<span class="item-photo_text"><mark>Материалы:</mark> 9 сваи 89мм, длиной 2500мм, оголовки 200*200 мм</span>
+						</a>
+						<a href="../images/gallery/original/12.jpeg" class="photo-block_item item-photo">
+							<picture class="item-photo_image">
+								<source srcset="../images/gallery/webp/@2x/12.webp 2x, ../images/gallery/webp/12.webp 1x" type="image/webp">
+								<img src="../images/gallery/jpg/12.jpeg" srcset="../images/gallery/jpg/@2x/12.jpeg 2x" width="265" height="190" alt="Винтовые сваи под звбор">
+							</picture>
+							<span class="item-photo_title">Винтовые сваи под звбор</span>
+							<span class="item-photo_text"><mark>Материалы:</mark> сваи – 56х2000 мм;количество винтовых свай – 6 штук;</span>
+						</a>
+					</div>
+				</section>
+				<!-- <div class="pagination noselect">
+					<div class="pagination_body">
+						<a href="#!" class="pagination_prev"><svg viewBox="0 -22 512 511" xmlns="http://www.w3.org/2000/svg"><path d="m512 233.820312-212.777344-233.320312v139.203125h-45.238281c-140.273437 0-253.984375 113.710937-253.984375 253.984375v73.769531l20.09375-22.019531c68.316406-74.851562 164.980469-117.5 266.324219-117.5h12.804687v139.203125zm0 0"/></svg></a>
+						<div class="pagination_numbers">
+							<span class="pagination_item-numbers active">1</span>
+							<a href="{{common.domain}}/gallereya2/" class="pagination_item-numbers">2</a>
+						</div>
+						<a href="{{common.domain}}/gallereya2/" class="pagination_next active"><svg viewBox="0 -22 512 511" xmlns="http://www.w3.org/2000/svg"><path d="m512 233.820312-212.777344-233.320312v139.203125h-45.238281c-140.273437 0-253.984375 113.710937-253.984375 253.984375v73.769531l20.09375-22.019531c68.316406-74.851562 164.980469-117.5 266.324219-117.5h12.804687v139.203125zm0 0"/></svg></a>
+					</div>
+				</div> -->
+			</section>
+		</div>
+	</main>
+	{% include "./_source/modal.html" %}
+	{% include "./_source/footer.njk" %}
+	<script src="../scripts/main.js"></script>
+</body>
+</html>
