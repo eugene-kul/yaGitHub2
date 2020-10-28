@@ -15,7 +15,7 @@
 	"venyooId": "0000000000000000",
 	"callibri": "yes",
 	"envybox": "00000000000000000000000000000000",
-	"domain": "https://svai-vintovye-kem.ru",
+	"domain": "http://localhost:8080",
 	"geo": {
 		"latitude": "53.2605796",
 		"longitude": "49.9179003"
