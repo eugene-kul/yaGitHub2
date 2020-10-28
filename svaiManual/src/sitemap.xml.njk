@@ -8,6 +8,7 @@ eleventyExcludeFromCollections: true
     {% if page.url != "/404.html" and
 	 page.url != "/.htaccess" and
 	 page.url != "/net-stranicy/" and
+	 page.url != "/agreement/" and
 	 page.url != "/robots.txt" %}
     <url>
         <loc>{{ common.domain }}{{ page.url | url }}</loc>

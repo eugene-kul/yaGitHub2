@@ -6,20 +6,17 @@
 	"ogrnOrOgrnip": "333",
 	"bankCurrentAccount": "444",
 	"banksBik": "555",
-	"vkPage": "https://vk.com/zongtong",
+	"vkPage": "https://vk.com/8798787896789",
 	"instPage": "https://instagram.com/group",
 	"facebookPage": "https://facebook.com/group",
 	"youtubePage": "https://youtube.com/group",
+	"yandexVerification": "",
 	"ym-callback-widget": "yes",
 	"logo": "photo",
 	"venyooId": "0000000000000000",
 	"callibri": "yes",
 	"envybox": "00000000000000000000000000000000",
-	"domain": "http://localhost:8080",
-	"geo": {
-		"latitude": "53.2605796",
-		"longitude": "49.9179003"
-	},
+	"domain": "http://svai-vintovye-krasnoyarsk.ru",
 	"price": {
 		"d57": {
 			"s500":"590",
