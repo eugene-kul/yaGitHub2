@@ -787,26 +787,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		});
 	});
 
-	let widgets = function () {
-		let callibriScript = document.createElement('script');
-		callibriScript.type = 'text/javascript';
-		callibriScript.src = '//callibri-a.akamaihd.net/callibri.js';
-		callibriScript.charset = 'UTF-8';
-		document.body.appendChild(callibriScript);
+	// let widgets = function () {
+	// 	let callibriScript = document.createElement('script');
+	// 	callibriScript.type = 'text/javascript';
+	// 	callibriScript.src = '//callibri-a.akamaihd.net/callibri.js';
+	// 	callibriScript.charset = 'UTF-8';
+	// 	document.body.appendChild(callibriScript);
 
-		let envyboxScript = document.createElement('script');
-		let envyboxLink = document.createElement('link');
-		envyboxScript.type = 'text/javascript';
-		envyboxScript.src = 'https://cdn.envybox.io/widget/cbk.js?wcb_code={{common.venyooId}}';
-		envyboxScript.charset = 'UTF-8';
-		envyboxLink.rel = 'stylesheet';
-		envyboxLink.href = 'https://cdn.envybox.io/widget/cbk.css';
-		document.body.appendChild(envyboxScript);
-		document.body.appendChild(envyboxLink);
+	// 	let envyboxScript = document.createElement('script');
+	// 	let envyboxLink = document.createElement('link');
+	// 	envyboxScript.type = 'text/javascript';
+	// 	envyboxScript.src = 'https://cdn.envybox.io/widget/cbk.js?wcb_code={{common.venyooId}}';
+	// 	envyboxScript.charset = 'UTF-8';
+	// 	envyboxLink.rel = 'stylesheet';
+	// 	envyboxLink.href = 'https://cdn.envybox.io/widget/cbk.css';
+	// 	document.body.appendChild(envyboxScript);
+	// 	document.body.appendChild(envyboxLink);
 
-		window.removeEventListener('scroll', widgets);
-	}
-	window.addEventListener('scroll', widgets);
+	// 	window.removeEventListener('scroll', widgets);
+	// }
+	// window.addEventListener('scroll', widgets);
 		
 	//отправка формы
 	var punycode = new function Punycode() {
